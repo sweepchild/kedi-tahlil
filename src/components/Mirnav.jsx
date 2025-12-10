@@ -76,7 +76,7 @@ const Mirnav = () => {
         </div>
         
         <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Mırnav</h1>
-        <p className="text-white text-center mb-8">Doğum: 01.01.2019 | Yaş: 6 | Tarih: 17.09.2025</p>
+        <p className="text-white text-center mb-8">Doğum: 20.05.2019 | Yaş: 6 | Tarih: 17.09.2025</p>
         
         <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Biyokimya</h2>
