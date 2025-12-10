@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kedi Tahlil – Tek Sayfa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #f6f6f6; margin: 0; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 20px; }
+    .nav { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+    .nav button {
+      padding: 10px 16px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .nav button:hover { background: #eee; }
+    .card {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #fafafa; }
+  </style>
+</head>
+
+<body>
+  <h1>🐾 Kedi Tahlil Sonuçları</h1>
+
+  <div id="root"></div>
+
+  <!-- React CDNs -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+    const e = React.createElement;
+
+    /* ------------------------------------------------------------------
+       COMPONENT 1: MIRNAV
+    ------------------------------------------------------------------ */
+    function Mirnav() {
+      const testler = [
+        { test: 'WBC (Beyaz Kan Hücresi)', deger: 7.5, ref: '5.5 - 19.5', birim: 'x10^9/L', durum: 'N' },
+        { test: 'RBC (Kırmızı Kan Hücresi)', deger: 8.1, ref: '5.0 - 10.0', birim: 'x10^12/L', durum: 'N' },
+        { test: 'Hemoglobin', deger: 13.4, ref: '8.0 - 15.0', birim: 'g/dL', durum: 'N' },
+        { test: 'Hematokrit', deger: 38.1, ref: '24.0 - 45.0', birim: '%', durum: 'N' },
+        { test: 'Platelet', deger: 301, ref: '300 - 800', birim: 'x10^9/L', durum: 'N' },
+      ];
+
+      return e("div", { className: "card" },
+        e("h2", {}, "Mirnav – Kan Tahlili"),
+        e("p", {}, "Kısırlaştırma öncesi rutin kan kontrolü."),
+        renderTable(testler)
+      );
+    }
+
+    /* ------------------------------------------------------------------
+       COMPONENT 2: VENUS
+    ------------------------------------------------------------------ */
+    function Venus() {
+      const testler = [
+        { test: 'ALT', deger: 44, ref: '12 - 130', birim: 'U/L', durum: 'N' },
+        { test: 'AST', deger: 32, ref: '26 - 43', birim: 'U/L', durum: 'N' },
+        { test: 'BUN', deger: 28, ref: '16 - 36', birim: 'mg/dL', durum: 'N' },
+        { test: 'Kreatinin', deger: 1.1, ref: '0.8 - 2.4', birim: 'mg/dL', durum: 'N' },
+        { test: 'Glukoz', deger: 102, ref: '70 - 150', birim: 'mg/dL', durum: 'N' },
+      ];
+
+      return e("div", { className: "card" },
+        e("h2", {}, "Venüs – Biyokimya Paneli"),
+        e("p", {}, "Genel sağlık kontrolü."),
+        renderTable(testler)
+      );
+    }
+
+    /* ------------------------------------------------------------------
+       COMPONENT 3: YELELI
+    ------------------------------------------------------------------ */
+    function Yeleli() {
+      const testler = [
+        { test: 'Eozinofil', deger: 7.0, ref: '7.0 - 60.0', birim: '%', durum: 'N' },
+        { test: 'Lenfosit', deger: 28, ref: '20 - 55', birim: '%', durum: 'N' },
+        { test: 'Nötrofil', deger: 62, ref: '35 - 75', birim: '%', durum: 'N' },
+        { test: 'Monosit', deger: 3, ref: '1 - 4', birim: '%', durum: 'N' },
+      ];
+
+      return e("div", { className: "card" },
+        e("h2", {}, "Yeleli – Hemogram"),
+        e("p", {}, "Rutin kontrol kan sayımı."),
+        renderTable(testler)
+      );
+    }
+
+    /* ------------------------------------------------------------------
+       COMPONENT 4: LUKE
+    ------------------------------------------------------------------ */
+    function Luke() {
+      const testler = [
+        { test: 'ALT', deger: 38, ref: '12 - 130', birim: 'U/L', durum: 'N' },
+        { test: 'AST', deger: 29, ref: '26 - 43', birim: 'U/L', durum: 'N' },
+        { test: 'BUN', deger: 30, ref: '16 - 36', birim: 'mg/dL', durum: 'N' },
+        { test: 'Kreatinin', deger: 1.0, ref: '0.8 - 2.4', birim: 'mg/dL', durum: 'N' },
+        { test: 'Glukoz', deger: 96, ref: '70 - 150', birim: 'mg/dL', durum: 'N' },
+      ];
+
+      return e("div", { className: "card" },
+        e("h2", {}, "Luke – Genel Panel"),
+        e("p", {}, "Yıllık sağlık kontrolü."),
+        renderTable(testler)
+      );
+    }
+
+    /* ------------------------------------------------------------------
+       HELPER: Table renderer
+    ------------------------------------------------------------------ */
+    function renderTable(data) {
+      return e("table", {},
+        e("thead", {},
+          e("tr", {},
+            e("th", {}, "Test"),
+            e("th", {}, "Değer"),
+            e("th", {}, "Referans"),
+            e("th", {}, "Birim"),
+            e("th", {}, "Durum")
+          )
+        ),
+        e("tbody", {},
+          data.map((t, i) =>
+            e("tr", { key: i },
+              e("td", {}, t.test),
+              e("td", {}, t.deger),
+              e("td", {}, t.ref),
+              e("td", {}, t.birim),
+              e("td", {}, t.durum === "N" ? "Normal" : "⚠️")
+            )
+          )
+        )
+      );
+    }
+
+    /* ------------------------------------------------------------------
+       APP COMPONENT (Tabs)
+    ------------------------------------------------------------------ */
+    function App() {
+      const [page, setPage] = React.useState("mirnav");
+
+      const pages = {
+        mirnav: Mirnav,
+        venus: Venus,
+        yeleli: Yeleli,
+        luke: Luke
+      };
+
+      const Current = pages[page];
+
+      return e("div", {},
+        e("div", { className: "nav" },
+          e("button", { onClick: () => setPage("mirnav") }, "Mirnav"),
+          e("button", { onClick: () => setPage("venus") }, "Venüs"),
+          e("button", { onClick: () => setPage("yeleli") }, "Yeleli"),
+          e("button", { onClick: () => setPage("luke") }, "Luke")
+        ),
+        e(Current)
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root"))
+      .render(e(App));
+  </script>
+</body>
+</html>
+
