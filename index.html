@@ -5,230 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kedi Tahlil Sonuçları</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+</head>
 <body>
     <div id="root"></div>
 
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/react-router-dom@6.20.0/dist/umd/react-router-dom.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <script type="text/babel">
-        // Tüm React bileşenleri ve verileri buraya kopyalanmıştır.
-        
-        // Mirnav Verileri [cite: 84, 88]
+        // Mirnav Verileri
         const mirnavBiyokimya = [
-            { test: 'CRE', sonuc: '1.33', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' },
-            { test: 'TCHO', sonuc: '180', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' },
-            { test: 'BUN', sonuc: '25.1', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' },
-            { test: 'Kalsiyum', sonuc: '13.3', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' },
-            { test: 'Glukoz', sonuc: '100', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'N' },
-            { test: 'TBIL', sonuc: '0.3', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' },
-            { test: 'IP', sonuc: '3.1', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' },
-            { test: 'GGT', sonuc: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' },
-            { test: 'ALT', sonuc: '43', ref: '8.0 - 57.0', birim: 'u/L', durum: 'N' },
-            { test: 'ALP', sonuc: '14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' },
-            { test: 'AST', sonuc: '29', ref: '18.0 - 51.0', birim: 'u/L', durum: 'N' },
-            { test: 'vAMY', sonuc: '2023', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'H' },
-            { test: 'CPK', sonuc: '184', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' },
-            { test: 'BUN/CRE', sonuc: '18.87', ref: '4.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'NA/K', sonuc: '36.38', ref: '-', birim: '-', durum: '-' },
-            { test: 'ALB', sonuc: '3.8', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'H' },
-            { test: 'TP', sonuc: '7.7', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
-            { test: 'ALB/GLOB', sonuc: '0.97', ref: '0.4 - 1.5', birim: '-', durum: 'N' },
-            { test: 'Potasyum', sonuc: '4.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'H' },
-            { test: 'Klor', sonuc: '126', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'H' },
-            { test: 'Sodyum', sonuc: '171', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'H' }
-        ];
+            { test: 'CRE', sonuc: '1.33', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' }[cite: 84],
+            { test: 'TCHO', sonuc: '180', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' }[cite: 84],
+            { test: 'BUN', sonuc: '25.1', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' }[cite: 84],
+            { test: 'Kalsiyum', sonuc: '13.3', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' }[cite: 84],
+            { test: 'Glukoz', sonuc: '100', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'N' }[cite: 84, 85],
+            { test: 'TBIL', sonuc: '0.3', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' }[cite: 85],
+            { test: 'IP', sonuc: '3.1', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' }[cite: 85],
+            { test: 'GGT', sonuc: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' }[cite: 85],
+            { test: 'ALT', sonuc: '43', ref: '8.0 - 57.0', birim: 'u/L', durum: 'N' }[cite: 85],
+            { test: 'ALP', sonuc: '14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' }[cite: 85],
+            { test: 'AST', sonuc: '29', ref: '18.0 - 51.0', birim: 'u/L', durum: 'N' }[cite: 85, 86],
+            { test: 'vAMY', sonuc: '2023', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'H' }[cite: 86],
+            { test: 'CPK', sonuc: '184', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' }[cite: 86],
+            { test: 'BUN/CRE', sonuc: '18.87', ref: '4.0 - 33.0', birim: '-', durum: 'N' }[cite: 86],
+            { test: 'NA/K', sonuc: '36.38', ref: '-', birim: '-', durum: '-' }[cite: 86],
+            { test: 'ALB', sonuc: '3.8', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'H' }[cite: 86],
+            { test: 'TP', sonuc: '7.7', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' }[cite: 86, 87],
+            { test: 'ALB/GLOB', sonuc: '0.97', ref: '0.4 - 1.5', birim: '-', durum: 'N' }[cite: 87],
+            { test: 'Potasyum', sonuc: '4.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'H' }[cite: 87],
+            { test: 'Klor', sonuc: '126', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'H' }[cite: 87],
+            { test: 'Sodyum', sonuc: '171', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'H' } [cite: 87]
+        ]; [cite: 84]
         const mirnavHemogram = [
-            { test: 'Lökosit', sonuc: '6.20', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil', sonuc: '3.97', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Lenfosit', sonuc: '1.66', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Monosit', sonuc: '0.26', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Eozinofil', sonuc: '0.30', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Bazofil', sonuc: '0.01', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil (%)', sonuc: '64.0', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
-            { test: 'Lenfosit (%)', sonuc: '26.7', ref: '7.0 - 60.0', birim: '%', durum: 'N' },
-            { test: 'Monosit (%)', sonuc: '4.2', ref: '0.8 - 8.0', birim: '%', durum: 'N' },
-            { test: 'Eozinofil (%)', sonuc: '4.9', ref: '0.5 - 11.5', birim: '%', durum: 'N' },
-            { test: 'Bazofil (%)', sonuc: '0.2', ref: '0.0 - 2.3', birim: '%', durum: 'N' },
-            { test: 'Eritrosit', sonuc: '10.34', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' },
-            { test: 'Hemoglobin', sonuc: '16.1', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'H' },
-            { test: 'Hematokrit', sonuc: '45.2', ref: '26.0 - 50.2', birim: '%', durum: 'N' },
-            { test: 'MCV', sonuc: '43.7', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' },
-            { test: 'MCHC', sonuc: '356', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' },
-            { test: 'MCH', sonuc: '15.6', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' },
-            { test: 'RDW-CV', sonuc: '16.2', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
-            { test: 'RDW-SD', sonuc: '25.1', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
-            { test: 'IRF', sonuc: '7.7', ref: '0.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'RET%', sonuc: '0.05', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
-            { test: 'MFR', sonuc: '7.7', ref: '0.0 - 25.8', birim: '-', durum: 'N' },
-            { test: 'HFR', sonuc: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' },
-            { test: 'RHE', sonuc: '17.4', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
-            { test: 'Trombosit', sonuc: '226', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'MPV', sonuc: '10.2', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' },
-            { test: 'PDW', sonuc: '14.5', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
-            { test: 'PCT', sonuc: '2.30', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' }
-        ];
+            { test: 'Lökosit', sonuc: '6.20', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' }[cite: 88],
+            { test: 'Nötrofil', sonuc: '3.97', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' }[cite: 88],
+            { test: 'Lenfosit', sonuc: '1.66', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' }[cite: 88],
+            { test: 'Monosit', sonuc: '0.26', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' }[cite: 88],
+            { test: 'Eozinofil', sonuc: '0.30', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' }[cite: 88],
+            { test: 'Bazofil', sonuc: '0.01', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' }[cite: 88, 89],
+            { test: 'Nötrofil (%)', sonuc: '64.0', ref: '30.0 - 83.5', birim: '%', durum: 'N' }[cite: 89],
+            { test: 'Lenfosit (%)', sonuc: '26.7', ref: '7.0 - 60.0', birim: '%', durum: 'N' }[cite: 89],
+            { test: 'Monosit (%)', sonuc: '4.2', ref: '0.8 - 8.0', birim: '%', durum: 'N' }[cite: 89],
+            { test: 'Eozinofil (%)', sonuc: '4.9', ref: '0.5 - 11.5', birim: '%', durum: 'N' }[cite: 89],
+            { test: 'Bazofil (%)', sonuc: '0.2', ref: '0.0 - 2.3', birim: '%', durum: 'N' }[cite: 89, 90],
+            { test: 'Eritrosit', sonuc: '10.34', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' }[cite: 90],
+            { test: 'Hemoglobin', sonuc: '16.1', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'H' }[cite: 90],
+            { test: 'Hematokrit', sonuc: '45.2', ref: '26.0 - 50.2', birim: '%', durum: 'N' }[cite: 90],
+            { test: 'MCV', sonuc: '43.7', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' }[cite: 90],
+            { test: 'MCHC', sonuc: '356', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' }[cite: 90],
+            { test: 'MCH', sonuc: '15.6', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' }[cite: 90, 91],
+            { test: 'RDW-CV', sonuc: '16.2', ref: '14.2 - 26.6', birim: '%', durum: 'N' }[cite: 91],
+            { test: 'RDW-SD', sonuc: '25.1', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' }[cite: 91],
+            { test: 'IRF', sonuc: '7.7', ref: '0.0 - 33.0', birim: '-', durum: 'N' }[cite: 91],
+            { test: 'RET%', sonuc: '0.05', ref: '0.1 - 0.9', birim: '%', durum: 'N' }[cite: 91],
+            { test: 'MFR', sonuc: '7.7', ref: '0.0 - 25.8', birim: '-', durum: 'N' }[cite: 91],
+            { test: 'HFR', sonuc: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' }[cite: 91, 92],
+            { test: 'RHE', sonuc: '17.4', ref: '14.2 - 21.5', birim: '-', durum: 'N' }[cite: 92],
+            { test: 'Trombosit', sonuc: '226', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }[cite: 92],
+            { test: 'MPV', sonuc: '10.2', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' }[cite: 92],
+            { test: 'PDW', sonuc: '14.5', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' }[cite: 92],
+            { test: 'PCT', sonuc: '2.30', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' } [cite: 92]
+        ]; [cite: 88]
 
-        // Venus Verileri [cite: 115, 116, 118, 119, 120, 121, 122, 123, 124]
-        const venusGluco1 = { tarih: '17.09.2025', sonuc: '360', durum: 'H', birim: 'mg/dL' };
-        const venusGluco2 = { tarih: '31.10.2025', sonuc: '129', durum: 'N', birim: 'mg/dL' };
+        // Venus Verileri
+        const venusGluco1 = { tarih: '17.09.2025', sonuc: '360', durum: 'H', birim: 'mg/dL' }[cite: 115];
+        const venusGluco2 = { tarih: '31.10.2025', sonuc: '129', durum: 'N', birim: 'mg/dL' }[cite: 116];
         const venusDigerDegerler = [
-            { ad: 'Sodyum', sonuc: '170', durum: 'H', ref: 'Ref: 147.0 - 156.0 mEq/L' },
-            { ad: 'Klor', sonuc: '127', durum: 'H', ref: 'Ref: 107.0 - 120.0 mEq/L' },
-            { ad: 'ALT', sonuc: '61', durum: 'H', ref: 'Ref: 8.0 - 57.0 u/L' },
-            { ad: 'TCHO', sonuc: '197', durum: 'H', ref: 'Ref: 89.0 - 176.0 mg/dL' },
-            { ad: 'Hemoglobin', sonuc: '17.3', durum: 'H', ref: 'Ref: 9.0 - 16.0 g/dL' },
-            { ad: 'IP', sonuc: '2.4', durum: 'L', ref: 'Ref: 2.6 - 6.0 mg/dL' }
+            { ad: 'Sodyum', sonuc: '170', durum: 'H', ref: 'Ref: 147.0 - 156.0 mEq/L' }[cite: 120],
+            { ad: 'Klor', sonuc: '127', durum: 'H', ref: 'Ref: 107.0 - 120.0 mEq/L' }[cite: 121],
+            { ad: 'ALT', sonuc: '61', durum: 'H', ref: 'Ref: 8.0 - 57.0 u/L' }[cite: 122],
+            { ad: 'TCHO', sonuc: '197', durum: 'H', ref: 'Ref: 89.0 - 176.0 mg/dL' }[cite: 122, 123],
+            { ad: 'Hemoglobin', sonuc: '17.3', durum: 'H', ref: 'Ref: 9.0 - 16.0 g/dL' }[cite: 123],
+            { ad: 'IP', sonuc: '2.4', durum: 'L', ref: 'Ref: 2.6 - 6.0 mg/dL' } [cite: 124]
         ];
-        const venusFruktozamin = '403';
-        const venusRefGluco = '71.0 - 148.0 mg/dL';
+        const venusFruktozamin = '403'[cite: 118, 119];
+        const venusRefGluco = '71.0 - 148.0 mg/dL'[cite: 118];
 
-        // Yeleli Verileri [cite: 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141]
+        // Yeleli Verileri
         const yeleliBiyokimya = [
-            { test: 'ALB', onc: '3.4', yeni: '3.5', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'N' },
-            { test: 'ALB/GLOB', onc: '0.83', yeni: '0.90', ref: '0.4 - 1.5', birim: '-', durum: 'N' },
-            { test: 'ALP', onc: '14', yeni: '14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' },
-            { test: 'ALT', onc: '44', yeni: '58', ref: '8.0 - 57.0', birim: 'u/L', durum: 'H' },
-            { test: 'AST', onc: '19', yeni: '27', ref: '18.0 - 51.0', birim: 'u/L', durum: 'N' },
-            { test: 'BUN', onc: '18.4', yeni: '17.9', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' },
-            { test: 'BUN/CRE', onc: '27.46', yeni: '25.21', ref: '4.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'Kalsiyum', onc: '13.4', yeni: '13.0', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' },
-            { test: 'Klor', onc: '131', yeni: '106', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'L' },
-            { test: 'CRE', onc: '0.67', yeni: '0.71', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'L' },
-            { test: 'GGT', onc: '10', yeni: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' },
-            { test: 'Glukoz', onc: '284.5', yeni: '270', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'H' },
-            { test: 'IP', onc: '1.5', yeni: '2.6', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' },
-            { test: 'Potasyum', onc: '3.6', yeni: '3.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' },
-            { test: 'Sodyum', onc: '170', yeni: '143', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'L' },
-            { test: 'TBIL', onc: '0.2', yeni: '0.2', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' },
-            { test: 'TCHO', onc: '156', yeni: '157', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'N' },
-            { test: 'TP', onc: '7.5', yeni: '7.4', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
-            { test: 'vAMY', onc: '1322', yeni: '1352', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'N' },
-            { test: 'NA/K', onc: '47.22', yeni: '38.65', ref: '-', birim: '-', durum: '-' },
-            { test: 'CPK', onc: '159', yeni: '-', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' },
-            { test: 'Fruktozamin', onc: '-', yeni: '300', ref: '-', birim: '-', durum: '-' }
-        ];
+            { test: 'ALB', onc: '3.4', yeni: '3.5', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'N' }[cite: 130],
+            { test: 'ALB/GLOB', onc: '0.83', yeni: '0.90', ref: '0.4 - 1.5', birim: '-', durum: 'N' }[cite: 130],
+            { test: 'ALP', onc: '14', yeni: '14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' }[cite: 130],
+            { test: 'ALT', onc: '44', yeni: '58', ref: '8.0 - 57.0', birim: 'u/L', durum: 'H' }[cite: 130],
+            { test: 'AST', onc: '19', yeni: '27', ref: '18.0 - 51.0', birim: 'u/L', durum: 'N' }[cite: 130, 131],
+            { test: 'BUN', onc: '18.4', yeni: '17.9', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' }[cite: 131],
+            { test: 'BUN/CRE', onc: '27.46', yeni: '25.21', ref: '4.0 - 33.0', birim: '-', durum: 'N' }[cite: 131],
+            { test: 'Kalsiyum', onc: '13.4', yeni: '13.0', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' }[cite: 131],
+            { test: 'Klor', onc: '131', yeni: '106', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'L' }[cite: 131],
+            { test: 'CRE', onc: '0.67', yeni: '0.71', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'L' }[cite: 131, 132],
+            { test: 'GGT', onc: '10', yeni: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' }[cite: 132],
+            { test: 'Glukoz', onc: '284.5', yeni: '270', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'H' }[cite: 132],
+            { test: 'IP', onc: '1.5', yeni: '2.6', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' }[cite: 132],
+            { test: 'Potasyum', onc: '3.6', yeni: '3.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' }[cite: 132],
+            { test: 'Sodyum', onc: '170', yeni: '143', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'L' }[cite: 132, 133],
+            { test: 'TBIL', onc: '0.2', yeni: '0.2', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' }[cite: 133],
+            { test: 'TCHO', onc: '156', yeni: '157', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'N' }[cite: 133],
+            { test: 'TP', onc: '7.5', yeni: '7.4', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' }[cite: 133],
+            { test: 'vAMY', onc: '1322', yeni: '1352', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'N' }[cite: 133],
+            { test: 'NA/K', onc: '47.22', yeni: '38.65', ref: '-', birim: '-', durum: '-' }[cite: 133],
+            { test: 'CPK', onc: '159', yeni: '-', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' }[cite: 133, 134],
+            { test: 'Fruktozamin', onc: '-', yeni: '300', ref: '-', birim: '-', durum: '-' } [cite: 134]
+        ]; [cite: 130]
         const yeleliHemogram = [
-            { test: 'Lökosit', onc: '8.60', yeni: '9.50', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil', onc: '4.89', yeni: '6.90', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Lenfosit', onc: '2.57', yeni: '1.66', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Monosit', onc: '0.34', yeni: '0.56', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Eozinofil', onc: '0.68', yeni: '0.29', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Bazofil', onc: '0.11', yeni: '0.09', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil (%)', onc: '56.9', yeni: '72.6', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
-            { test: 'Lenfosit (%)', onc: '29.9', yeni: '17.5', ref: '7.0 - 60.0', birim: '%', durum: 'N' },
-            { test: 'Monosit (%)', onc: '4.0', yeni: '5.9', ref: '0.8 - 8.0', birim: '%', durum: 'N' },
-            { test: 'Eozinofil (%)', onc: '7.9', yeni: '3.1', ref: '0.5 - 11.5', birim: '%', durum: 'N' },
-            { test: 'Bazofil (%)', onc: '1.3', yeni: '0.9', ref: '0.0 - 2.3', birim: '%', durum: 'N' },
-            { test: 'Eritrosit', onc: '10.48', yeni: '11.04', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' },
-            { test: 'Hemoglobin', onc: '15.0', yeni: '15.4', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'N' },
-            { test: 'Hematokrit', onc: '42.2', yeni: '42.7', ref: '26.0 - 50.2', birim: '%', durum: 'N' },
-            { test: 'MCV', onc: '40.3', yeni: '38.7', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' },
-            { test: 'MCHC', onc: '355', yeni: '361', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' },
-            { test: 'MCH', onc: '14.3', yeni: '13.9', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' },
-            { test: 'RDW-CV', onc: '15.3', yeni: '15.0', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
-            { test: 'RDW-SD', onc: '22.0', yeni: '24.6', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
-            { test: 'RET%', onc: '0.17', yeni: '0.08', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
-            { test: 'IRF', onc: '22.9', yeni: '25.5', ref: '0.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'MFR', onc: '18.7', yeni: '25.5', ref: '0.0 - 25.8', birim: '-', durum: 'N' },
-            { test: 'HFR', onc: '4.2', yeni: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' },
-            { test: 'Trombosit', onc: '190', yeni: '33', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'L' },
-            { test: 'MPV', onc: '11.6', yeni: '13.4', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' },
-            { test: 'PDW', onc: '14.4', yeni: '13.9', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
-            { test: 'PCT', onc: '2.21', yeni: '0.44', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'L' },
-            { test: 'IPF#', onc: '3', yeni: '2', ref: '-', birim: '-', durum: '-' },
-            { test: 'RBC-O', onc: '10.50', yeni: '11.02', ref: '-', birim: '-', durum: '-' },
-            { test: 'RPI', onc: '0.1', yeni: '0.1', ref: '-', birim: '-', durum: '-' }
-        ];
+            { test: 'Lökosit', onc: '8.60', yeni: '9.50', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' }[cite: 135],
+            { test: 'Nötrofil', onc: '4.89', yeni: '6.90', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' }[cite: 135],
+            { test: 'Lenfosit', onc: '2.57', yeni: '1.66', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' }[cite: 135],
+            { test: 'Monosit', onc: '0.34', yeni: '0.56', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' }[cite: 135],
+            { test: 'Eozinofil', onc: '0.68', yeni: '0.29', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' }[cite: 135, 136],
+            { test: 'Bazofil', onc: '0.11', yeni: '0.09', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' }[cite: 136],
+            { test: 'Nötrofil (%)', onc: '56.9', yeni: '72.6', ref: '30.0 - 83.5', birim: '%', durum: 'N' }[cite: 136],
+            { test: 'Lenfosit (%)', onc: '29.9', yeni: '17.5', ref: '7.0 - 60.0', birim: '%', durum: 'N' }[cite: 136],
+            { test: 'Monosit (%)', onc: '4.0', yeni: '5.9', ref: '0.8 - 8.0', birim: '%', durum: 'N' }[cite: 136],
+            { test: 'Eozinofil (%)', onc: '7.9', yeni: '3.1', ref: '0.5 - 11.5', birim: '%', durum: 'N' }[cite: 136, 137],
+            { test: 'Bazofil (%)', onc: '1.3', yeni: '0.9', ref: '0.0 - 2.3', birim: '%', durum: 'N' }[cite: 137],
+            { test: 'Eritrosit', onc: '10.48', yeni: '11.04', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' }[cite: 137],
+            { test: 'Hemoglobin', onc: '15.0', yeni: '15.4', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'N' }[cite: 137],
+            { test: 'Hematokrit', onc: '42.2', yeni: '42.7', ref: '26.0 - 50.2', birim: '%', durum: 'N' }[cite: 137],
+            { test: 'MCV', onc: '40.3', yeni: '38.7', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' }[cite: 137, 138],
+            { test: 'MCHC', onc: '355', yeni: '361', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' }[cite: 138],
+            { test: 'MCH', onc: '14.3', yeni: '13.9', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' }[cite: 138],
+            { test: 'RDW-CV', onc: '15.3', yeni: '15.0', ref: '14.2 - 26.6', birim: '%', durum: 'N' }[cite: 138],
+            { test: 'RDW-SD', onc: '22.0', yeni: '24.6', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' }[cite: 138],
+            { test: 'RET%', onc: '0.17', yeni: '0.08', ref: '0.1 - 0.9', birim: '%', durum: 'N' }[cite: 138],
+            { test: 'IRF', onc: '22.9', yeni: '25.5', ref: '0.0 - 33.0', birim: '-', durum: 'N' }[cite: 138, 139],
+            { test: 'MFR', onc: '18.7', yeni: '25.5', ref: '0.0 - 25.8', birim: '-', durum: 'N' }[cite: 139],
+            { test: 'HFR', onc: '4.2', yeni: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' }[cite: 139],
+            { test: 'RHE', onc: '17.0', yeni: '16.1', ref: '14.2 - 21.5', birim: '-', durum: 'N' }[cite: 139],
+            { test: 'Trombosit', onc: '190', yeni: '33', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'L' }[cite: 139],
+            { test: 'MPV', onc: '11.6', yeni: '13.4', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' }[cite: 139, 140],
+            { test: 'PDW', onc: '14.4', yeni: '13.9', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' }[cite: 140],
+            { test: 'PCT', onc: '2.21', yeni: '0.44', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'L' }[cite: 140],
+            { test: 'IPF#', onc: '3', yeni: '2', ref: '-', birim: '-', durum: '-' }[cite: 140],
+            { test: 'RBC-O', onc: '10.50', yeni: '11.02', ref: '-', birim: '-', durum: '-' }[cite: 140],
+            { test: 'RPI', onc: '0.1', yeni: '0.1', ref: '-', birim: '-', durum: '-' } [cite: 140, 141]
+        ]; [cite: 135]
 
-        // Luke Verileri [cite: 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178]
+        // Luke Verileri
         const lukeBiyokimya = [
-            { test: 'TP', onc: '1.7', yeni: '7.7', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
-            { test: 'TCHO', onc: '177', yeni: '198', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' },
-            { test: 'BUN', onc: '18.8', yeni: '19.6', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' },
-            { test: 'Kalsiyum', onc: '11.9', yeni: '11.8', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'N' },
-            { test: 'Glukoz', onc: '230', yeni: '218', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'H' },
-            { test: 'TBIL', onc: '0.2', yeni: '0.4', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' },
-            { test: 'CRE', onc: '0.85', yeni: '0.87', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' },
-            { test: 'vAMY', onc: '1347', yeni: '1407', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'N' },
-            { test: 'CPK', onc: '176', yeni: '-', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' },
-            { test: 'GGT', onc: '10', yeni: '<10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' },
-            { test: 'ALT', onc: '70', yeni: '61', ref: '8.0 - 57.0', birim: 'u/L', durum: 'N' },
-            { test: 'Potasyum', onc: '3.4', yeni: '3.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' },
-            { test: 'ALP', onc: '14', yeni: '<14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' },
-            { test: 'ALB', onc: '3.1', yeni: '3.5', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'N' },
-            { test: 'Sodyum', onc: '173', yeni: '143', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'L' },
-            { test: 'Klor', onc: '132', yeni: '106', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'L' },
-            { test: 'TP (g/dL)', onc: '7.3', yeni: '-', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
-            { test: 'BUN/CRE', onc: '22.12', yeni: '22.5', ref: '4.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'ALB/GLOB', onc: '0.74', yeni: '0.8', ref: '0.4 - 1.5', birim: '-', durum: 'N' },
-            { test: 'NA/K', onc: '50.88', yeni: '38.65', ref: '-', birim: '-', durum: '-' },
-            { test: 'AST', onc: '-', yeni: '35', ref: '18.0 - 51.0', birim: 'U/I', durum: 'N' },
-            { test: 'NH3', onc: '-', yeni: '30', ref: '23 - 78', birim: 'ug/dl', durum: 'N' },
-            { test: 'GLOB', onc: '-', yeni: '4.2', ref: '-', birim: 'g/dl', durum: '-' },
-            { test: 'IP', onc: '-', yeni: '2.4', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'L' },
-            { test: 'AST/ALT', onc: '-', yeni: '0.6', ref: '-', birim: '-', durum: '-' },
-            { test: 'Fruktozamin', onc: '-', yeni: '298', ref: '-', birim: '-', durum: '-' }
-        ];
-        const lukeHemogram = [
-            { test: 'Lökosit', onc: '14.87', yeni: '14.66', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil', onc: '5.38', yeni: '11.74', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'H' },
-            { test: 'Lenfosit', onc: '4.58', yeni: '1.54', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Monosit', onc: '0.37', yeni: '0.65', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Eozinofil', onc: '4.49', yeni: '0.69', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Bazofil', onc: '0.04', yeni: '0.04', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'Nötrofil (%)', onc: '36.2', yeni: '80.1', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
-            { test: 'Lenfosit (%)', onc: '30.8', yeni: '10.5', ref: '7.0 - 60.0', birim: '%', durum: 'N' },
-            { test: 'Monosit (%)', onc: '2.5', yeni: '4.4', ref: '0.8 - 8.0', birim: '%', durum: 'N' },
-            { test: 'Eozinofil (%)', onc: '30.2', yeni: '4.7', ref: '0.5 - 11.5', birim: '%', durum: 'N' },
-            { test: 'Bazofil (%)', onc: '0.3', yeni: '0.3', ref: '0.0 - 2.3', birim: '%', durum: 'N' },
-            { test: 'Eritrosit', onc: '9.84', yeni: '10.07', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' },
-            { test: 'Hemoglobin', onc: '15.3', yeni: '14.8', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'N' },
-            { test: 'Hematokrit', onc: '43.1', yeni: '42.6', ref: '26.0 - 50.2', birim: '%', durum: 'N' },
-            { test: 'MCV', onc: '43.8', yeni: '42.3', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' },
-            { test: 'MCH', onc: '15.6', yeni: '14.7', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' },
-            { test: 'MCHC', onc: '355', yeni: '347', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' },
-            { test: 'RDW-CV', onc: '16.0', yeni: '16.0', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
-            { test: 'RDW-SD', onc: '25.0', yeni: '25.0', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
-            { test: 'RET%', onc: '0.29', yeni: '0.22', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
-            { test: 'IRF', onc: '28.6', yeni: '10.3', ref: '0.0 - 33.0', birim: '-', durum: 'N' },
-            { test: 'MFR', onc: '22.8', yeni: '10.3', ref: '0.0 - 25.8', birim: '-', durum: 'N' },
-            { test: 'HFR', onc: '5.8', yeni: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' },
-            { test: 'RHE', onc: '17.4', yeni: '16.6', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
-            { test: 'Trombosit', onc: '341', yeni: '372', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' },
-            { test: 'PDW', onc: '14.4', yeni: '14.3', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
-            { test: 'MPV', onc: '12.1', yeni: '11.4', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' },
-            { test: 'PCT', onc: '4.11', yeni: '4.25', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' },
-            { test: 'IPF#', onc: '6', yeni: '2.7', ref: '-', birim: '-', durum: '-' }
-        ];
+            { test: 'TP', onc: '1.7', yeni: '7.7', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' }[cite: 168],
+            { test: 'TCHO', onc: '177', yeni: '198', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' }[cite: 168],
+            { test: 'BUN', onc: '18.8', yeni: '19.6', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' }[cite: 168],
+            { test: 'Kalsiyum', onc: '11.9', yeni: '11.8', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'N' }[cite: 168],
+            { test: 'Glukoz', onc: '230', yeni: '218', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'H' }[cite: 168, 169],
+            { test: 'TBIL', onc: '0.2', yeni: '0.4', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' }[cite: 169],
+            { test: 'CRE', onc: '0.85', yeni: '0.87', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' }[cite: 169],
+            { test: 'vAMY', onc: '1347', yeni: '1407', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'N' }[cite: 169],
+            { test: 'CPK', onc: '176', yeni: '-', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' }[cite: 169],
+            { test: 'GGT', onc: '10', yeni: '<10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' }[cite: 169, 170],
+            { test: 'ALT', onc: '70', yeni: '61', ref: '8.0 - 57.0', birim: 'u/L', durum: 'N' }[cite: 170],
+            { test: 'Potasyum', onc: '3.4', yeni: '3.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' }[cite: 170],
+            { test: 'ALP', onc: '14', yeni: '<14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' }[cite: 170],
+            { test: 'ALB', onc: '3.1', yeni: '3.5', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'N' }[cite: 170],
+            { test: 'Sodyum', onc: '173', yeni: '143', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'L' }[cite: 170, 171],
+            { test: 'Klor', onc: '132', yeni: '106', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'L' }[cite: 171],
+            { test: 'TP (g/dL)', onc: '7.3', yeni: '-', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' }[cite: 171],
+            { test: 'BUN/CRE', onc: '22.12', yeni: '22.5', ref: '4.0 - 33.0', birim: '-', durum: 'N' }[cite: 171],
+            { test: 'ALB/GLOB', onc: '0.74', yeni: '0.8', ref: '0.4 - 1.5', birim: '-', durum: 'N' }[cite: 171],
+            { test: 'NA/K', onc: '50.88', yeni: '38.65', ref: '-', birim: '-', durum: '-' }[cite: 171],
+            { test: 'AST', onc: '-', yeni: '35', ref: '18.0 - 51.0', birim: 'U/I', durum: 'N' }[cite: 172],
+            { test: 'NH3', onc: '-', yeni: '30', ref: '23 - 78', birim: 'ug/dl', durum: 'N' }[cite: 172],
+            { test: 'GLOB', onc: '-', yeni: '4.2', ref: '-', birim: 'g/dl', durum: '-' }[cite: 172],
+            { test: 'IP', onc: '-', yeni: '2.4', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'L' }[cite: 172],
+            { test: 'AST/ALT', onc: '-', yeni: '0.6', ref: '-', birim: '-', durum: '-' }[cite: 172],
+            { test: 'Fruktozamin', onc: '-', yeni: '298', ref: '-', birim: '-', durum: '-' } [cite: 172, 173]
+        ]; [cite: 168]
 
-        // Ok ve Değişim Hesaplama Fonksiyonları [cite: 179, 180, 181, 182, 183, 184]
+        const lukeHemogram = [
+            { test: 'Lökosit', onc: '14.87', yeni: '14.66', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' }[cite: 173],
+            { test: 'Nötrofil', onc: '5.38', yeni: '11.74', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'H' }[cite: 173],
+            { test: 'Lenfosit', onc: '4.58', yeni: '1.54', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' }[cite: 173],
+            { test: 'Monosit', onc: '0.37', yeni: '0.65', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' }[cite: 173],
+            { test: 'Eozinofil', onc: '4.49', yeni: '0.69', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' }[cite: 173, 174],
+            { test: 'Bazofil', onc: '0.04', yeni: '0.04', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' }[cite: 174],
+            { test: 'Nötrofil (%)', onc: '36.2', yeni: '80.1', ref: '30.0 - 83.5', birim: '%', durum: 'N' }[cite: 174],
+            { test: 'Lenfosit (%)', onc: '30.8', yeni: '10.5', ref: '7.0 - 60.0', birim: '%', durum: 'N' }[cite: 174],
+            { test: 'Monosit (%)', onc: '2.5', yeni: '4.4', ref: '0.8 - 8.0', birim: '%', durum: 'N' }[cite: 174],
+            { test: 'Eozinofil (%)', onc: '30.2', yeni: '4.7', ref: '0.5 - 11.5', birim: '%', durum: 'N' }[cite: 174, 175],
+            { test: 'Bazofil (%)', onc: '0.3', yeni: '0.3', ref: '0.0 - 2.3', birim: '%', durum: 'N' }[cite: 175],
+            { test: 'Eritrosit', onc: '9.84', yeni: '10.07', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' }[cite: 175],
+            { test: 'Hemoglobin', onc: '15.3', yeni: '14.8', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'N' }[cite: 175],
+            { test: 'Hematokrit', onc: '43.1', yeni: '42.6', ref: '26.0 - 50.2', birim: '%', durum: 'N' }[cite: 175],
+            { test: 'MCV', onc: '43.8', yeni: '42.3', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' }[cite: 175, 176],
+            { test: 'MCH', onc: '15.6', yeni: '14.7', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' }[cite: 176],
+            { test: 'MCHC', onc: '355', yeni: '347', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' }[cite: 176],
+            { test: 'RDW-CV', onc: '16.0', yeni: '16.0', ref: '14.2 - 26.6', birim: '%', durum: 'N' }[cite: 176],
+            { test: 'RDW-SD', onc: '25.0', yeni: '25.0', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' }[cite: 176],
+            { test: 'RET%', onc: '0.29', yeni: '0.22', ref: '0.1 - 0.9', birim: '%', durum: 'N' }[cite: 176, 177],
+            { test: 'IRF', onc: '28.6', yeni: '10.3', ref: '0.0 - 33.0', birim: '-', durum: 'N' }[cite: 177],
+            { test: 'MFR', onc: '22.8', yeni: '10.3', ref: '0.0 - 25.8', birim: '-', durum: 'N' }[cite: 177],
+            { test: 'HFR', onc: '5.8', yeni: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' }[cite: 177],
+            { test: 'RHE', onc: '17.4', yeni: '16.6', ref: '14.2 - 21.5', birim: '-', durum: 'N' }[cite: 177],
+            { test: 'Trombosit', onc: '341', yeni: '372', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }[cite: 177],
+            { test: 'PDW', onc: '14.4', yeni: '14.3', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' }[cite: 177, 178],
+            { test: 'MPV', onc: '12.1', yeni: '11.4', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' }[cite: 178],
+            { test: 'PCT', onc: '4.11', yeni: '4.25', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' }[cite: 178],
+            { test: 'IPF#', onc: '6', yeni: '2.7', ref: '-', birim: '-', durum: '-' } [cite: 178]
+        ]; [cite: 173]
+
+
+        // Ok ve Değişim Hesaplama Fonksiyonları [cite: 179-184]
         const getArrow = (onc, yeni) => {
-            if (onc === '-' || yeni === '-' || onc === yeni) return '→';
-            const o = parseFloat(onc.replace('<', ''));
-            const y = parseFloat(yeni.replace('<', ''));
-            if (isNaN(o) || isNaN(y)) return '→';
-            if (y > o) return '↑';
-            if (y < o) return '↓';
-            return '→';
+            if (onc === '-' || yeni === '-' || onc === yeni) return '→'; [cite: 179]
+            const o = parseFloat(onc.replace('<', '')); [cite: 180]
+            const y = parseFloat(yeni.replace('<', '')); [cite: 180]
+            if (isNaN(o) || isNaN(y)) return '→'; [cite: 180]
+            if (y > o) return '↑'; [cite: 181]
+            if (y < o) return '↓'; [cite: 181]
+            return '→'; [cite: 181]
         };
         const getChange = (onc, yeni) => {
-            if (onc === '-' || yeni === '-') return 'Yeni';
-            const o = parseFloat(onc.replace('<', ''));
-            const y = parseFloat(yeni.replace('<', ''));
-            if (isNaN(o) || isNaN(y)) return '-';
-            const diff = (y - o).toFixed(2);
-            return diff > 0 ? `+${diff}` : diff;
+            if (onc === '-' || yeni === '-') return 'Yeni'; [cite: 182]
+            const o = parseFloat(onc.replace('<', '')); [cite: 183]
+            const y = parseFloat(yeni.replace('<', '')); [cite: 183]
+            if (isNaN(o) || isNaN(y)) return '-'; [cite: 183]
+            const diff = (y - o).toFixed(2); [cite: 184]
+            return diff > 0 ? `+${diff}` : diff; [cite: 184]
         };
 
-        // StatusBadge Bileşeni [cite: 93, 94, 95]
+        // StatusBadge Bileşeni [cite: 93, 94]
         const StatusBadge = ({ status }) => {
             const colors = {
-                'N': 'bg-green-100 text-green-800',
-                'H': 'bg-red-100 text-red-800',
-                'L': 'bg-yellow-100 text-yellow-800',
-                '-': 'bg-gray-100 text-gray-800'
+                'N': 'bg-green-100 text-green-800', [cite: 93]
+                'H': 'bg-red-100 text-red-800', [cite: 93]
+                'L': 'bg-yellow-100 text-yellow-800', [cite: 93]
+                '-': 'bg-gray-100 text-gray-800' [cite: 93]
             };
-            const labels = { 'N': 'Normal', 'H': 'Yüksek', 'L': 'Düşük', '-': '-' };
-            return <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colors[status]}`}>{labels[status]}</span>;
+            const labels = { 'N': 'Normal', 'H': 'Yüksek', 'L': 'Düşük', '-': '-' }; [cite: 94]
+            return <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colors[status]}`}>{labels[status]}</span>; [cite: 95]
         };
 
         // TableRow Bileşeni
@@ -246,49 +254,49 @@
                     <td className="p-3"><span className="bg-gray-100 px-2 py-1 rounded">{item.onc}</span></td>
                     <td className="p-3"><span className="bg-gray-100 px-2 py-1 rounded">{item.yeni}</span></td>
                 </> : 
-                <td className="p-3"><span className="bg-gray-100 px-3 py-1 rounded font-medium">{item.sonuc}</span></td>;
+                <td className="p-3"><span className="bg-gray-100 px-3 py-1 rounded font-medium">{item.sonuc}</span></td>; [cite: 99]
 
-            const refCell = isComparison ? item.ref : item.ref;
-            const unitCell = isComparison ? item.birim : item.birim;
-            const statusCell = isComparison ? item.durum : item.durum;
+            const refCell = isComparison ? item.ref : item.ref; [cite: 154, 99]
+            const unitCell = isComparison ? item.birim : item.birim; [cite: 154, 99]
+            const statusCell = isComparison ? item.durum : item.durum; [cite: 154, 99]
             
             return (
-                <tr className="border-b hover:bg-gray-50">
-                    <td className="p-3 font-semibold">{item.test || item.ad}</td>
+                <tr className="border-b hover:bg-gray-50"> [cite: 98]
+                    <td className="p-3 font-semibold">{item.test || item.ad}</td> [cite: 99]
                     {resultCell}
                     {compareCell}
-                    <td className="p-3 text-gray-600">{refCell}</td>
-                    <td className="p-3">{unitCell}</td>
-                    <td className="p-3"><StatusBadge status={statusCell} /></td>
+                    <td className="p-3 text-gray-600">{refCell}</td> [cite: 99]
+                    <td className="p-3">{unitCell}</td> [cite: 99]
+                    <td className="p-3"><StatusBadge status={statusCell} /></td> [cite: 99]
                 </tr>
             );
         };
 
-        // Mirnav Bileşeni [cite: 96-105]
+        // Mirnav Bileşeni [cite: 83-106]
         const Mirnav = () => {
             return (
-                <div className="min-h-screen bg-gradient-to-br from-emerald-500 to-teal-600 p-6">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="mb-6">
-                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link>
+                <div className="min-h-screen bg-gradient-to-br from-emerald-500 to-teal-600 p-6"> [cite: 95]
+                    <div className="max-w-6xl mx-auto"> [cite: 95]
+                        <div className="mb-6"> [cite: 95]
+                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link> [cite: 95]
                         </div>
-                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Mırnav</h1>
-                        <p className="text-white text-center mb-8">Doğum: 01.01.2019 | Yaş: 6 | Tarih: 17.09.2025</p>
+                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Mırnav</h1> [cite: 95]
+                        <p className="text-white text-center mb-8">Doğum: 01.01.2019 | Yaş: 6 | Tarih: 17.09.2025</p> [cite: 95, 96]
                         
-                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
-                            <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Biyokimya</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-                                            <th className="p-3 text-left">Test Adı</th>
-                                            <th className="p-3 text-left">Sonuç</th>
-                                            <th className="p-3 text-left">Referans Aralık</th>
-                                            <th className="p-3 text-left">Birim</th>
-                                            <th className="p-3 text-left">Durum</th>
-                                        </tr>
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8"> [cite: 96]
+                            <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Biyokimya</h2> [cite: 96]
+                            <div className="overflow-x-auto"> [cite: 96]
+                                <table className="w-full text-sm"> [cite: 96]
+                                    <thead> [cite: 97]
+                                        <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white"> [cite: 97]
+                                            <th className="p-3 text-left">Test Adı</th> [cite: 97]
+                                            <th className="p-3 text-left">Sonuç</th> [cite: 97]
+                                            <th className="p-3 text-left">Referans Aralık</th> [cite: 97]
+                                            <th className="p-3 text-left">Birim</th> [cite: 97]
+                                            <th className="p-3 text-left">Durum</th> [cite: 97]
+                                        </tr> [cite: 98]
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 98]
                                         {mirnavBiyokimya.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={false} />
                                         ))}
@@ -297,20 +305,20 @@
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Hemogram</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-                                            <th className="p-3 text-left">Test Adı</th>
-                                            <th className="p-3 text-left">Sonuç</th>
-                                            <th className="p-3 text-left">Referans Aralık</th>
-                                            <th className="p-3 text-left">Birim</th>
-                                            <th className="p-3 text-left">Durum</th>
+                        <div className="bg-white rounded-2xl shadow-2xl p-6"> [cite: 100]
+                            <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Hemogram</h2> [cite: 101]
+                            <div className="overflow-x-auto"> [cite: 101]
+                                <table className="w-full text-sm"> [cite: 101]
+                                    <thead> [cite: 101]
+                                        <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white"> [cite: 101]
+                                            <th className="p-3 text-left">Test Adı</th> [cite: 102]
+                                            <th className="p-3 text-left">Sonuç</th> [cite: 102]
+                                            <th className="p-3 text-left">Referans Aralık</th> [cite: 102]
+                                            <th className="p-3 text-left">Birim</th> [cite: 102]
+                                            <th className="p-3 text-left">Durum</th> [cite: 102]
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 103]
                                         {mirnavHemogram.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={false} />
                                         ))}
@@ -326,49 +334,49 @@
         // Venus Bileşeni [cite: 110-125]
         const Venus = () => {
             return (
-                <div className="min-h-screen bg-gradient-to-br from-blue-500 to-cyan-600 p-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="mb-6">
-                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link>
+                <div className="min-h-screen bg-gradient-to-br from-blue-500 to-cyan-600 p-6"> [cite: 113]
+                    <div className="max-w-7xl mx-auto"> [cite: 113]
+                        <div className="mb-6"> [cite: 113]
+                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link> [cite: 113]
                         </div>
-                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Venus</h1>
-                        <p className="text-white text-center mb-8">Yaş: 0</p>
+                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Venus</h1> [cite: 113]
+                        <p className="text-white text-center mb-8">Yaş: 0</p> [cite: 113]
                         
-                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
-                            <h2 className="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Glukoz Takibi</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="bg-red-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600">{venusGluco1.tarih}</div>
-                                    <div className="text-3xl font-bold text-red-600">{venusGluco1.sonuc}</div>
-                                    <div className="text-sm text-gray-600">{venusGluco1.birim}</div>
-                                    <StatusBadge status={venusGluco1.durum} />
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8"> [cite: 114]
+                            <h2 className="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Glukoz Takibi</h2> [cite: 114]
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> [cite: 114]
+                                <div className="bg-red-50 p-4 rounded-lg"> [cite: 114]
+                                    <div className="text-sm text-gray-600">{venusGluco1.tarih}</div> [cite: 115]
+                                    <div className="text-3xl font-bold text-red-600">{venusGluco1.sonuc}</div> [cite: 115]
+                                    <div className="text-sm text-gray-600">{venusGluco1.birim}</div> [cite: 115]
+                                    <StatusBadge status={venusGluco1.durum} /> [cite: 115]
                                 </div>
-                                <div className="bg-green-50 p-4 rounded-lg">
-                                    <div className="text-sm text-gray-600">{venusGluco2.tarih}</div>
-                                    <div className="text-3xl font-bold text-green-600">{venusGluco2.sonuc}</div>
-                                    <div className="text-sm text-gray-600">{venusGluco2.birim}</div>
-                                    <StatusBadge status={venusGluco2.durum} />
+                                <div className="bg-green-50 p-4 rounded-lg"> [cite: 115]
+                                    <div className="text-sm text-gray-600">{venusGluco2.tarih}</div> [cite: 116]
+                                    <div className="text-3xl font-bold text-green-600">{venusGluco2.sonuc}</div> [cite: 116]
+                                    <div className="text-sm text-gray-600">{venusGluco2.birim}</div> [cite: 116]
+                                    <StatusBadge status={venusGluco2.durum} /> [cite: 116]
                                 </div>
                             </div>
-                            <div className="mt-4 p-4 bg-green-100 rounded-lg">
+                            <div className="mt-4 p-4 bg-green-100 rounded-lg"> [cite: 116]
                                 <p className="text-green-800 font-semibold">
-                                    ✅ Glukoz seviyesi {venusGluco1.sonuc - venusGluco2.sonuc} puan düştü! ({venusGluco1.sonuc} → {venusGluco2.sonuc})
+                                    ✅ Glukoz seviyesi {venusGluco1.sonuc - venusGluco2.sonuc} puan düştü! [cite: 117] ({venusGluco1.sonuc} → {venusGluco2.sonuc}) [cite: 118]
                                 </p>
-                                <p className="text-sm text-green-700 mt-2">Referans Aralık: {venusRefGluco}</p>
+                                <p className="text-sm text-green-700 mt-2">Referans Aralık: {venusRefGluco}</p> [cite: 118]
                             </div>
-                            <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                                <p className="text-blue-800"><strong>Fruktozamin ({venusGluco2.tarih}):</strong> {venusFruktozamin}</p>
+                            <div className="mt-4 p-4 bg-blue-50 rounded-lg"> [cite: 118]
+                                <p className="text-blue-800"><strong>Fruktozamin ({venusGluco2.tarih}):</strong> {venusFruktozamin}</p> [cite: 119]
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 className="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Diğer Değerler ({venusGluco1.tarih})</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6"> [cite: 119]
+                            <h2 className="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Diğer Değerler ({venusGluco1.tarih})</h2> [cite: 119]
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> [cite: 119]
                                 {venusDigerDegerler.map((item, i) => (
-                                    <div key={i} className="p-3 bg-gray-50 rounded">
-                                        <div className="font-semibold">{item.ad}</div>
-                                        <div className="text-lg">{item.sonuc} <StatusBadge status={item.durum} /></div>
-                                        <div className="text-sm text-gray-600">{item.ref}</div>
+                                    <div key={i} className="p-3 bg-gray-50 rounded"> [cite: 120]
+                                        <div className="font-semibold">{item.ad}</div> [cite: 120]
+                                        <div className="text-lg">{item.sonuc} <StatusBadge status={item.durum} /></div> [cite: 120, 121]
+                                        <div className="text-sm text-gray-600">{item.ref}</div> [cite: 120]
                                     </div>
                                 ))}
                             </div>
@@ -378,30 +386,30 @@
             );
         };
 
-        // Yeleli Bileşeni [cite: 147-163]
+        // Yeleli Bileşeni [cite: 129-163]
         const Yeleli = () => {
-            const tableHeadersBiyokimya = ["Test", "17.09.2025", "20.11.2025", "Değişim", "Referans", "Birim", "Durum"];
-            const tableHeadersHemogram = ["Test", "17.09.2025", "20.11.2025", "Değişim", "Referans", "Birim", "Durum"];
+            const tableHeadersBiyokimya = ["Test", "17.09.2025", "20.11.2025", "Değişim", "Referans", "Birim", "Durum"]; [cite: 149, 150]
+            const tableHeadersHemogram = ["Test", "17.09.2025", "20.11.2025", "Değişim", "Referans", "Birim", "Durum"]; [cite: 156, 157]
 
             return (
-                <div className="min-h-screen bg-gradient-to-br from-pink-500 to-rose-600 p-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="mb-6">
-                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link>
+                <div className="min-h-screen bg-gradient-to-br from-pink-500 to-rose-600 p-6"> [cite: 147]
+                    <div className="max-w-7xl mx-auto"> [cite: 147]
+                        <div className="mb-6"> [cite: 147]
+                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link> [cite: 147]
                         </div>
-                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Yeleli</h1>
-                        <p className="text-white text-center mb-8">Doğum: 01.08.2019 | Yaş: 6</p>
+                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Yeleli</h1> [cite: 147]
+                        <p className="text-white text-center mb-8">Doğum: 01.08.2019 | Yaş: 6</p> [cite: 147, 148]
                         
-                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
-                            <h2 className="text-2xl font-bold text-pink-600 mb-4 border-b-2 border-pink-600 pb-2">Biyokimya</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-pink-500 to-rose-600 text-white">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8"> [cite: 148]
+                            <h2 className="text-2xl font-bold text-pink-600 mb-4 border-b-2 border-pink-600 pb-2">Biyokimya</h2> [cite: 148]
+                            <div className="overflow-x-auto"> [cite: 148]
+                                <table className="w-full text-sm"> [cite: 148]
+                                    <thead> [cite: 149]
+                                        <tr className="bg-gradient-to-r from-pink-500 to-rose-600 text-white"> [cite: 149]
                                             {tableHeadersBiyokimya.map((header, i) => <th key={i} className="p-3 text-left">{header}</th>)}
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 151]
                                         {yeleliBiyokimya.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={true} kediAdi="Yeleli" />
                                         ))}
@@ -410,16 +418,16 @@
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 className="text-2xl font-bold text-pink-600 mb-4 border-b-2 border-pink-600 pb-2">Hemogram</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-pink-500 to-rose-600 text-white">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6"> [cite: 155]
+                            <h2 className="text-2xl font-bold text-pink-600 mb-4 border-b-2 border-pink-600 pb-2">Hemogram</h2> [cite: 155]
+                            <div className="overflow-x-auto"> [cite: 155]
+                                <table className="w-full text-sm"> [cite: 155]
+                                    <thead> [cite: 156]
+                                        <tr className="bg-gradient-to-r from-pink-500 to-rose-600 text-white"> [cite: 156]
                                             {tableHeadersHemogram.map((header, i) => <th key={i} className="p-3 text-left">{header}</th>)}
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 158]
                                         {yeleliHemogram.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={true} kediAdi="Yeleli" />
                                         ))}
@@ -432,30 +440,30 @@
             );
         };
 
-        // Luke Bileşeni [cite: 187-203]
+        // Luke Bileşeni [cite: 167-203]
         const Luke = () => {
-            const tableHeadersBiyokimya = ["Test", "17.09.2025", "13.11.2025", "Değişim", "Referans", "Birim", "Durum"];
-            const tableHeadersHemogram = ["Test", "17.09.2025", "13.11.2025", "Değişim", "Referans", "Birim", "Durum"];
+            const tableHeadersBiyokimya = ["Test", "17.09.2025", "13.11.2025", "Değişim", "Referans", "Birim", "Durum"]; [cite: 189, 190]
+            const tableHeadersHemogram = ["Test", "17.09.2025", "13.11.2025", "Değişim", "Referans", "Birim", "Durum"]; [cite: 196, 197]
 
             return (
-                <div className="min-h-screen bg-gradient-to-br from-purple-500 to-indigo-600 p-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="mb-6">
-                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link>
+                <div className="min-h-screen bg-gradient-to-br from-purple-500 to-indigo-600 p-6"> [cite: 187]
+                    <div className="max-w-7xl mx-auto"> [cite: 187]
+                        <div className="mb-6"> [cite: 187]
+                            <Link to="/" className="text-white hover:underline">← Ana Sayfaya Dön</Link> [cite: 187]
                         </div>
-                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Luke</h1>
-                        <p className="text-white text-center mb-8">Doğum: 01.07.2018 | Yaş: 7</p>
+                        <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Luke</h1> [cite: 187]
+                        <p className="text-white text-center mb-8">Doğum: 01.07.2018 | Yaş: 7</p> [cite: 187, 188]
                         
-                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
-                            <h2 className="text-2xl font-bold text-purple-600 mb-4 border-b-2 border-purple-600 pb-2">Biyokimya</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8"> [cite: 188]
+                            <h2 className="text-2xl font-bold text-purple-600 mb-4 border-b-2 border-purple-600 pb-2">Biyokimya</h2> [cite: 188]
+                            <div className="overflow-x-auto"> [cite: 188]
+                                <table className="w-full text-sm"> [cite: 188]
+                                    <thead> [cite: 189]
+                                        <tr className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white"> [cite: 189]
                                             {tableHeadersBiyokimya.map((header, i) => <th key={i} className="p-3 text-left">{header}</th>)}
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 191]
                                         {lukeBiyokimya.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={true} kediAdi="Luke" />
                                         ))}
@@ -464,16 +472,16 @@
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 className="text-2xl font-bold text-purple-600 mb-4 border-b-2 border-purple-600 pb-2">Hemogram</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-sm">
-                                    <thead>
-                                        <tr className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6"> [cite: 195]
+                            <h2 className="text-2xl font-bold text-purple-600 mb-4 border-b-2 border-purple-600 pb-2">Hemogram</h2> [cite: 195]
+                            <div className="overflow-x-auto"> [cite: 195]
+                                <table className="w-full text-sm"> [cite: 195]
+                                    <thead> [cite: 196]
+                                        <tr className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white"> [cite: 196]
                                             {tableHeadersHemogram.map((header, i) => <th key={i} className="p-3 text-left">{header}</th>)}
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody> [cite: 198]
                                         {lukeHemogram.map((item, i) => (
                                             <TableRow key={i} item={item} isComparison={true} kediAdi="Luke" />
                                         ))}
@@ -486,37 +494,37 @@
             );
         };
         
-        // Home Bileşeni [cite: 61-67]
+        // Home Bileşeni [cite: 59-67]
         function Home() {
             const kediler = [
-                { name: 'Luke', path: '/luke', color: 'from-purple-500 to-indigo-600' },
-                { name: 'Yeleli', path: '/yeleli', color: 'from-pink-500 to-rose-600' },
-                { name: 'Venus', path: '/venus', color: 'from-blue-500 to-cyan-600' },
-                { name: 'Mırnav', path: '/mirnav', color: 'from-emerald-500 to-teal-600' }
+                { name: 'Luke', path: '/luke', color: 'from-purple-500 to-indigo-600' }[cite: 61],
+                { name: 'Yeleli', path: '/yeleli', color: 'from-pink-500 to-rose-600' }[cite: 61],
+                { name: 'Venus', path: '/venus', color: 'from-blue-500 to-cyan-600' }[cite: 61],
+                { name: 'Mırnav', path: '/mirnav', color: 'from-emerald-500 to-teal-600' } [cite: 61]
             ];
             return (
-                <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6">
-                    <div className="max-w-4xl mx-auto">
+                <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-6"> [cite: 62]
+                    <div className="max-w-4xl mx-auto"> [cite: 62]
                         <h1 className="text-5xl font-bold text-white text-center mb-4">
                             🏥 Kedi Tahlil Sonuçları
-                        </h1>
+                        </h1> [cite: 62]
                         <p className="text-white text-center mb-12 text-lg">
                             Kedilerinizin tahlil sonuçlarını görüntülemek için aşağıdan seçim yapın
-                        </p>
+                        </p> [cite: 62]
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> [cite: 63]
                             {kediler.map((kedi) => (
                                 <Link
                                     key={kedi.path}
                                     to={kedi.path}
-                                    className="bg-white rounded-2xl shadow-2xl p-8 hover:scale-105 transition-transform duration-300"
+                                    [cite_start]className="bg-white rounded-2xl shadow-2xl p-8 hover:scale-105 transition-transform duration-300" [cite: 63]
                                 >
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">🐱</div>
+                                    <div className="text-center"> [cite: 64]
+                                        <div className="text-6xl mb-4">🐱</div> [cite: 64]
                                         <h2 className={`text-3xl font-bold bg-gradient-to-r ${kedi.color} bg-clip-text text-transparent`}>
                                             {kedi.name}
-                                        </h2>
-                                        <p className="text-gray-600 mt-2">Tahlilleri görüntüle →</p>
+                                        </h2> [cite: 64]
+                                        <p className="text-gray-600 mt-2">Tahlilleri görüntüle →</p> [cite: 65]
                                     </div>
                                 </Link>
                             ))}
@@ -529,28 +537,24 @@
         // App Bileşeni [cite: 67, 68]
         function App() {
             return (
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/luke" element={<Luke />} />
-                        <Route path="/yeleli" element={<Yeleli />} />
-                        <Route path="/venus" element={<Venus />} />
-                        <Route path="/mirnav" element={<Mirnav />} />
+                <BrowserRouter> [cite: 67]
+                    <Routes> [cite: 67]
+                        <Route path="/" element={<Home />} /> [cite: 67]
+                        <Route path="/luke" element={<Luke />} /> [cite: 67]
+                        <Route path="/yeleli" element={<Yeleli />} /> [cite: 67]
+                        <Route path="/venus" element={<Venus />} /> [cite: 67]
+                        <Route path="/mirnav" element={<Mirnav />} /> [cite: 67]
                     </Routes>
                 </BrowserRouter>
             );
         }
 
-        // DOM'a Render Etme [cite: 72, 73, 74]
-        // NOT: React, ReactDOM, BrowserRouter, Routes, Route, Link tarayıcıda tanımlı olmalıdır.
+        // DOM'a Render Etme [cite: 73, 74]
+        // React Router DOM'un global değişkenini alın.
         const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<React.StrictMode><App /></React.StrictMode>);
+        const root = ReactDOM.createRoot(document.getElementById('root')); [cite: 73]
+        root.render(<React.StrictMode><App /></React.StrictMode>); [cite: 74]
     </script>
-    
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/react-router-dom@6/umd/react-router-dom.production.min.js"></script>
 </body>
 </html>
+
