@@ -145,7 +145,18 @@
                     name: 'Venus',
                     dogum: '20.05.2019',
                     yas: 6,
-                    // renderVenus için eklenen veriler KALDIRILDI.
+                    // renderVenus için eklenen veriler:
+                    glukoz1: { tarih: '17.09.2025', deger: '360', durum: 'H', ref: '71.0 - 148.0' },
+                    glukoz2: { tarih: '31.10.2025', deger: '129', durum: 'N', ref: '71.0 - 148.0' },
+                    fruktozamin: '403', // 31.10.2025
+                    diger: [ // 17.09.2025'teki Yüksek Değerler
+                        { test: 'Sodyum', deger: '170', durum: 'H', ref: '147.0 - 156.0', birim: 'mEq/L' },
+                        { test: 'Klor', deger: '127', durum: 'H', ref: '107.0 - 120.0', birim: 'mEq/L' },
+                        { test: 'ALT', deger: '61', durum: 'H', ref: '8.0 - 57.0', birim: 'u/L' },
+                        { test: 'TCHO', deger: '197', durum: 'H', ref: '89.0 - 176.0', birim: 'mg/dL' },
+                        { test: 'Hemoglobin', deger: '17.3', durum: 'H', ref: '9.0 - 16.0', birim: 'g/dL' }
+                    ],
+                    // Mevcut biyokimya ve hemogram verileri, bilgi bütünlüğünü korumak için burada kalmalıdır.
                     biyokimya: [
                         { test: 'TP', onc: '7.6', yeni: '-', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
                         { test: 'ALB', onc: '3.5', yeni: '-', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'N' },
@@ -470,7 +481,7 @@
                 `;
             },
 
-            // Venus render fonksiyonu, tablo formatına güncellendi.
+            // Düzeltilen renderVenus() fonksiyonu
             renderVenus() {
                 const data = this.data.venus;
                 return `
@@ -480,74 +491,46 @@
                         <p class="text-white text-center mb-8">Doğum: ${data.dogum} | Yaş: ${data.yas}</p>
                         
                         <div class="bg-white rounded-2xl shadow-2xl p-6 mb-8">
-                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Biyokimya</h2>
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-sm">
-                                    <thead>
-                                        <tr class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-                                            <th class="p-3 text-left">Test</th>
-                                            <th class="p-3 text-left">Önceki Sonuç (17.09.2025)</th>
-                                            <th class="p-3 text-left">Yeni Sonuç (31.10.2025)</th>
-                                            <th class="p-3 text-left">Değişim</th>
-                                            <th class="p-3 text-left">Referans</th>
-                                            <th class="p-3 text-left">Birim</th>
-                                            <th class="p-3 text-left">Durum</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${data.biyokimya.map(item => `
-                                            <tr class="border-b hover:bg-gray-50">
-                                                <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3"><span class="bg-gray-100 px-2 py-1 rounded">${item.onc}</span></td>
-                                                <td class="p-3"><span class="bg-gray-100 px-2 py-1 rounded">${item.yeni}</span></td>
-                                                <td class="p-3">
-                                                    <span class="${this.getArrow(item.onc, item.yeni) === '↑' ? 'text-red-600' : this.getArrow(item.onc, item.yeni) === '↓' ? 'text-green-600' : 'text-gray-600'}">
-                                                        ${this.getArrow(item.onc, item.yeni)} ${this.getChange(item.onc, item.yeni)}
-                                                    </span>
-                                                </td>
-                                                <td class="p-3 text-gray-600">${item.ref}</td>
-                                                <td class="p-3">${item.birim}</td>
-                                                <td class="p-3">${this.statusBadge(item.durum)}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
+                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Glukoz Takibi</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <div class="text-sm text-gray-600">${data.glukoz1.tarih}</div>
+                                    <div class="text-3xl font-bold text-red-600">${data.glukoz1.deger}</div>
+                                    <div class="text-sm text-gray-600">mg/dL</div>
+                                    ${this.statusBadge(data.glukoz1.durum)}
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <div class="text-sm text-gray-600">${data.glukoz2.tarih}</div>
+                                    <div class="text-3xl font-bold text-green-600">${data.glukoz2.deger}</div>
+                                    <div class="text-sm text-gray-600">mg/dL</div>
+                                    ${this.statusBadge(data.glukoz2.durum)}
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Hemogram (17.09.2025)</h2>
-                            <p class="text-gray-600 mb-4">Yeni sonuç bilgisi bulunmamaktadır.</p>
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-sm">
-                                    <thead>
-                                        <tr class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-                                            <th class="p-3 text-left">Test</th>
-                                            <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">Referans</th>
-                                            <th class="p-3 text-left">Birim</th>
-                                            <th class="p-3 text-left">Durum</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${data.hemogram.map(item => `
-                                            <tr class="border-b hover:bg-gray-50">
-                                                <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3"><span class="bg-gray-100 px-2 py-1 rounded">${item.onc}</span></td>
-                                                <td class="p-3 text-gray-600">${item.ref}</td>
-                                                <td class="p-3">${item.birim}</td>
-                                                <td class="p-3">${this.statusBadge(item.durum)}</td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
+                            <div class="p-4 bg-green-100 rounded-lg">
+                                <p class="text-green-800 font-semibold">✅ Glukoz seviyesi ${data.glukoz1.deger - data.glukoz2.deger} puan düştü! (${data.glukoz1.deger} → ${data.glukoz2.deger})</p>
+                                <p class="text-sm text-green-700 mt-2">Referans Aralık: ${data.glukoz1.ref} mg/dL</p>
+                            </div>
+                            <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                                <p class="text-blue-800"><strong>Fruktozamin (31.10.2025):</strong> ${data.fruktozamin}</p>
                             </div>
                         </div>
 
+                        <div class="bg-white rounded-2xl shadow-2xl p-6">
+                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Diğer Yüksek Değerler (17.09.2025)</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                ${data.diger.map(item => `
+                                    <div class="p-3 bg-gray-50 rounded">
+                                        <div class="font-semibold">${item.test}</div>
+                                        <div class="text-lg">${item.deger} ${this.statusBadge(item.durum)}</div>
+                                        <div class="text-sm text-gray-600">Ref: ${item.ref} ${item.birim}</div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
                     </div>
                 `;
             },
-            // Venus render fonksiyonu bitiş.
+            // Düzeltilen renderVenus() fonksiyonu Bitiş
 
             renderMirnav() {
                 const data = this.data.mirnav;
@@ -592,7 +575,7 @@
                                     <thead>
                                         <tr class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
                                             <th class="p-3 text-left">Test Adı</th>
-                                            <th class="p-3 text-left">17.09.2025</th>
+                                            <th class="p-3 text-left">Sonuç</th>
                                             <th class="p-3 text-left">Referans Aralık</th>
                                             <th class="p-3 text-left">Birim</th>
                                             <th class="p-3 text-left">Durum</th>
@@ -627,7 +610,7 @@
                     'home': this.renderHome(),
                     'luke': this.renderLuke(),
                     'yeleli': this.renderYeleli(),
-                    'venus': this.renderVenus(), // Düzeltilen fonksiyon burada çağrılıyor
+                    'venus': this.renderVenus(),
                     'mirnav': this.renderMirnav()
                 };
                 document.getElementById('app').innerHTML = pages[this.currentPage];
