@@ -76,7 +76,7 @@ const Mirnav = () => {
         </div>
         
         <h1 className="text-4xl font-bold text-white text-center mb-2">🐱 Mırnav</h1>
-        <p className="text-white text-center mb-8">Doğum: 20.05.2019 | Yaş: 6</p>
+        <p className="text-white text-center mb-8">Doğum: 20.05.2019 | Yaş: 6 | Tarih: 17.09.2025</p>
         
         <div className="bg-white rounded-2xl shadow-2xl p-6 mb-8">
           <h2 className="text-2xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-600 pb-2">Biyokimya</h2>
@@ -85,7 +85,7 @@ const Mirnav = () => {
               <thead>
                 <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
                   <th className="p-3 text-left">Test Adı</th>
-                  <th className="p-3 text-left">17.09.2025</th>
+                  <th className="p-3 text-left">Sonuç</th>
                   <th className="p-3 text-left">Referans Aralık</th>
                   <th className="p-3 text-left">Birim</th>
                   <th className="p-3 text-left">Durum</th>
@@ -113,7 +113,7 @@ const Mirnav = () => {
               <thead>
                 <tr className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
                   <th className="p-3 text-left">Test Adı</th>
-                  <th className="p-3 text-left">17.09.2025</th>
+                  <th className="p-3 text-left">Sonuç</th>
                   <th className="p-3 text-left">Referans Aralık</th>
                   <th className="p-3 text-left">Birim</th>
                   <th className="p-3 text-left">Durum</th>
