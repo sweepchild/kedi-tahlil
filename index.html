@@ -227,60 +227,55 @@
                     yas: 6,
                     tarih: '17.09.2025',
                     biyokimya: [
-                        { test: 'CRE', sonuc: '1.33', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' },
-                        { test: 'TCHO', sonuc: '180', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' },
-                        { test: 'BUN', sonuc: '25.1', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' },
-                        { test: 'Kalsiyum', sonuc: '13.3', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' },
-                        { test: 'Glukoz', sonuc: '100', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'N' },
-                        { test: 'TBIL', sonuc: '0.3', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'N' },
-                        { test: 'IP', sonuc: '3.1', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' },
-                        { test: 'GGT', sonuc: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' },
-                        { test: 'ALT', sonuc: '43', ref: '8.0 - 57.0', birim: 'u/L', durum: 'N' },
-                        { test: 'ALP', sonuc: '14', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' },
-                        { test: 'AST', sonuc: '29', ref: '18.0 - 51.0', birim: 'u/L', durum: 'N' },
-                        { test: 'vAMY', sonuc: '2023', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'H' },
-                        { test: 'CPK', sonuc: '184', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' },
-                        { test: 'BUN/CRE', sonuc: '18.87', ref: '4.0 - 33.0', birim: '-', durum: 'N' },
-                        { test: 'NA/K', sonuc: '36.38', ref: '-', birim: '-', durum: '-' },
-                        { test: 'ALB', sonuc: '3.8', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'H' },
-                        { test: 'TP', sonuc: '7.7', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'N' },
-                        { test: 'ALB/GLOB', sonuc: '0.97', ref: '0.4 - 1.5', birim: '-', durum: 'N' },
-                        { test: 'Potasyum', sonuc: '4.7', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'H' },
-                        { test: 'Klor', sonuc: '126', ref: '107.0 - 120.0', birim: 'mEq/L', durum: 'H' },
-                        { test: 'Sodyum', sonuc: '171', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'H' }
+                        { test: 'TP', onc: '7.7', yeni: '8.4', ref: '5.7 - 7.8', birim: 'g/dL', durum: 'H' },
+                        { test: 'ALB', onc: '3.8', yeni: '4.1', ref: '2.3 - 3.5', birim: 'g/dL', durum: 'H' },
+                        { test: 'GGT', onc: '10', yeni: '10', ref: '1.0 - 10.0', birim: 'u/L', durum: 'N' },
+                        { test: 'ALP', onc: '14', yeni: '19', ref: '9.0 - 53.0', birim: 'u/L', durum: 'N' },
+                        { test: 'ALB/GLOB', onc: '0.97', yeni: '0.95', ref: '0.4 - 1.5', birim: '-', durum: 'N' },
+                        { test: 'γAMY', onc: '2023', yeni: '1660', ref: '200.0 - 1900.0', birim: 'u/L', durum: 'N' },
+                        { test: 'CRE', onc: '1.33', yeni: '1.06', ref: '0.8 - 1.8', birim: 'mg/dL', durum: 'N' },
+                        { test: 'BUN', onc: '25.1', yeni: '23.5', ref: '17.6 - 32.8', birim: 'mg/dL', durum: 'N' },
+                        { test: 'TCHO', onc: '180', yeni: '219', ref: '89.0 - 176.0', birim: 'mg/dL', durum: 'H' },
+                        { test: 'BUN/CRE', onc: '18.87', yeni: '22.17', ref: '4.0 - 33.0', birim: '-', durum: 'N' },
+                        { test: 'Sodyum', onc: '171', yeni: '158', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'H' },
+                        { test: 'Potasyum', onc: '4.7', yeni: '4.0', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' },
+                        { test: 'NA/K', onc: '36.38', yeni: '39.5', ref: '-', birim: '-', durum: '-' },
+                        { test: 'IP', onc: '3.1', yeni: '3.0', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' },
+                        { test: 'Kalsiyum', onc: '13.3', yeni: '13.3', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' },
+                        { test: 'Glukoz', onc: '100', yeni: '101', ref: '71.0 - 148.0', birim: 'mg/dL', durum: 'N' },
+                        { test: 'TBIL', onc: '0.3', yeni: '0.7', ref: '0.1 - 0.4', birim: 'mg/dL', durum: 'H' }
                     ],
                     hemogram: [
-                        { test: 'Lökosit', sonuc: '6.20', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Nötrofil', sonuc: '3.97', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Lenfosit', sonuc: '1.66', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Monosit', sonuc: '0.26', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Eozinofil', sonuc: '0.30', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Bazofil', sonuc: '0.01', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'Nötrofil (%)', sonuc: '64.0', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
-                        { test: 'Lenfosit (%)', sonuc: '26.7', ref: '7.0 - 60.0', birim: '%', durum: 'N' },
-                        { test: 'Monosit (%)', sonuc: '4.2', ref: '0.8 - 8.0', birim: '%', durum: 'N' },
-                        { test: 'Eozinofil (%)', sonuc: '4.9', ref: '0.5 - 11.5', birim: '%', durum: 'N' },
-                        { test: 'Bazofil (%)', sonuc: '0.2', ref: '0.0 - 2.3', birim: '%', durum: 'N' },
-                        { test: 'Eritrosit', sonuc: '10.34', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' },
-                        { test: 'Hemoglobin', sonuc: '16.1', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'H' },
-                        { test: 'Hematokrit', sonuc: '45.2', ref: '26.0 - 50.2', birim: '%', durum: 'N' },
-                        { test: 'MCV', sonuc: '43.7', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' },
-                        { test: 'MCHC', sonuc: '356', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' },
-                        { test: 'MCH', sonuc: '15.6', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' },
-                        { test: 'RDW-CV', sonuc: '16.2', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
-                        { test: 'RDW-SD', sonuc: '25.1', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
-                        { test: 'IRF', sonuc: '7.7', ref: '0.0 - 33.0', birim: '-', durum: 'N' },
-                        { test: 'RET%', sonuc: '0.05', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
-                        { test: 'MFR', sonuc: '7.7', ref: '0.0 - 25.8', birim: '-', durum: 'N' },
-                        { test: 'HFR', sonuc: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' },
-                        { test: 'RHE', sonuc: '17.4', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
-                        { test: 'Trombosit', sonuc: '226', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' },
-                        { test: 'MPV', sonuc: '10.2', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' },
-                        { test: 'PDW', sonuc: '14.5', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
-                        { test: 'PCT', sonuc: '2.30', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' },
-                        { test: 'IPF#', sonuc: '3', ref: '-', birim: '-', durum: '-' },
-                        { test: 'RBC-O', sonuc: '10.31', ref: '-', birim: '-', durum: '-' },
-                        { test: 'RPI', sonuc: '0.0', ref: '-', birim: '-', durum: '-' }
+                        { test: 'Lökosit', onc: '6.20', yeni: '8.19', ref: '3.5 - 17.5', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Nötrofil', onc: '3.97', yeni: '5.23', ref: '2.0 - 11.5', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Lenfosit', onc: '1.66', yeni: '2.26', ref: '0.7 - 7.4', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Monosit', onc: '0.26', yeni: '0.48', ref: '0.1 - 1.0', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Eozinofil', onc: '0.30', yeni: '0.18', ref: '0.0 - 1.5', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Bazofil', onc: '0.01', yeni: '0.02', ref: '0.0 - 0.3', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'Nötrofil (%)', onc: '64.0', yeni: '63.8', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
+                        { test: 'Lenfosit (%)', onc: '26.7', yeni: '27.9', ref: '7.0 - 60.0', birim: '%', durum: 'N' },
+                        { test: 'Monosit (%)', onc: '4.2', yeni: '5.8', ref: '0.8 - 8.0', birim: '%', durum: 'N' },
+                        { test: 'Eozinofil (%)', onc: '4.9', yeni: '2.2', ref: '0.5 - 11.5', birim: '%', durum: 'N' },
+                        { test: 'Bazofil (%)', onc: '0.2', yeni: '0.3', ref: '0.0 - 2.3', birim: '%', durum: 'N' },
+                        { test: 'Eritrosit', onc: '10.2', yeni: '11.70', ref: '6.3 - 11.8', birim: 'x 10^12/L', durum: 'N' },
+                        { test: 'Hemoglobin', onc: '16.1', yeni: '17.2', ref: '9.0 - 16.0', birim: 'g/dL', durum: 'H' },
+                        { test: 'Hematokrit', onc: '45.2', yeni: '50.1', ref: '26.0 - 50.2', birim: '%', durum: 'N' },
+                        { test: 'MCV', onc: '43.7', yeni: '42.8', ref: '34.0 - 55.0', birim: 'fL', durum: 'N' },
+                        { test: 'MCHC', onc: '356', yeni: '343', ref: '285.0 - 384.0', birim: 'g/dL', durum: 'N' },
+                        { test: 'MCH', onc: '15.6', yeni: '14.7', ref: '11.0 - 18.0', birim: 'pg', durum: 'N' },
+                        { test: 'RDW-CV', onc: '16.2', yeni: '16.6', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
+                        { test: 'RDW-SD', onc: '25.1', yeni: '24.2', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
+                        { test: 'IRF', onc: '7.7', yeni: '9.2', ref: '0.0 - 33.0', birim: '-', durum: 'N' },
+                        { test: 'RET%', onc: '0.05', yeni: '0.12', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
+                        { test: 'HFR', onc: '0.0', yeni: '0.0', ref: '0.0 - 8.5', birim: '-', durum: 'N' },
+                        { test: 'RHE', onc: '17.4', yeni: '17.0', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
+                        { test: 'Trombosit', onc: '226', yeni: '223', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' },
+                        { test: 'MPV', onc: '10.2', yeni: '10.1', ref: '8.6 - 18.4', birim: 'fL', durum: 'N' },
+                        { test: 'PDW', onc: '14.5', yeni: '-', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
+                        { test: 'PCT', onc: '2.30', yeni: '2.25', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' },
+                        { test: 'IPF#', onc: '3', yeni: '2', ref: '-', birim: '-', durum: '-' },
+                        { test: 'RBC-O', onc: '10.31', yeni: '11.26', ref: '-', birim: '-', durum: '-' },
+                        { test: '%PT', onc: '0.0', yeni: '0.2', ref: '-', birim: '-', durum: '-' }
                     ]
                 }
             },
@@ -612,7 +607,9 @@
                                         <tr class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
                                             <th class="p-3 text-left">Test Adı</th>
                                             <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">Referans Aralık</th>
+                                            <th class="p-3 text-left">16.12.2025</th>
+                                            <th class="p-3 text-left">Değişim</th>
+                                            <th class="p-3 text-left">Referans</th>
                                             <th class="p-3 text-left">Birim</th>
                                         </tr>
                                     </thead>
@@ -620,7 +617,13 @@
                                         ${data.biyokimya.map(item => `
                                             <tr class="border-b hover:bg-gray-50">
                                                 <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-3 py-1 rounded font-medium">${item.sonuc}</span></td>
+                                                <td class="p-3 ${this.statusCellColor(this.getInitialStatus(item.onc, item.ref))}"><span class="px-3 py-1 rounded">${item.onc}</span></td>
+                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-2 py-1 rounded">${item.yeni}</span></td>
+                                                <td class="p-3">
+                                                    <span class="${this.getArrow(item.onc, item.yeni) === '↑' ? 'text-red-600' : this.getArrow(item.onc, item.yeni) === '↓' ? 'text-green-600' : 'text-gray-600'}">
+                                                        ${this.getArrow(item.onc, item.yeni)} ${this.getChange(item.onc, item.yeni)}
+                                                    </span>
+                                                </td>
                                                 <td class="p-3 text-gray-600">${item.ref}</td>
                                                 <td class="p-3">${item.birim}</td>
                                             </tr>
@@ -638,7 +641,9 @@
                                         <tr class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
                                             <th class="p-3 text-left">Test Adı</th>
                                             <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">Referans Aralık</th>
+                                            <th class="p-3 text-left">16.12.2025</th>
+                                            <th class="p-3 text-left">Değişim</th>
+                                            <th class="p-3 text-left">Referans</th>
                                             <th class="p-3 text-left">Birim</th>
                                         </tr>
                                     </thead>
@@ -646,7 +651,13 @@
                                         ${data.hemogram.map(item => `
                                             <tr class="border-b hover:bg-gray-50">
                                                 <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-3 py-1 rounded font-medium">${item.sonuc}</span></td>
+                                                <td class="p-3 ${this.statusCellColor(this.getInitialStatus(item.onc, item.ref))}"><span class="px-3 py-1 rounded">${item.onc}</span></td>
+                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-2 py-1 rounded">${item.yeni}</span></td>
+                                                <td class="p-3">
+                                                    <span class="${this.getArrow(item.onc, item.yeni) === '↑' ? 'text-red-600' : this.getArrow(item.onc, item.yeni) === '↓' ? 'text-green-600' : 'text-gray-600'}">
+                                                        ${this.getArrow(item.onc, item.yeni)} ${this.getChange(item.onc, item.yeni)}
+                                                    </span>
+                                                </td>
                                                 <td class="p-3 text-gray-600">${item.ref}</td>
                                                 <td class="p-3">${item.birim}</td>
                                             </tr>
