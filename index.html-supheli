@@ -93,7 +93,7 @@
                         { test: 'RET%', onc: '0.29', yeni: '0.22', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
                         { test: 'RHE', onc: '17.4', yeni: '16.6', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
                         { test: 'Trombosit', onc: '341', yeni: '372', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }
-                    ]
+		    ]
                 },
                 yeleli: {
                     name: 'Yeleli',
@@ -154,7 +154,7 @@
                         { test: 'RET%', onc: '0.17', yeni: '0.08', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
                         { test: 'RHE', onc: '17.0', yeni: '16.1', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
                         { test: 'RPI', onc: '0.1', yeni: '0.1', ref: '-', birim: '-', durum: '-' },
-                        { test: 'Trombosit', onc: '190', yeni: '33', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'L' }
+			{ test: 'Trombosit', onc: '190', yeni: '33', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'L' }
                     ]
                 },
                 venus: {
@@ -217,8 +217,8 @@
                         { test: 'RET%', onc: '0.20', yeni: '-', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
                         { test: 'RHE', onc: '17.3', yeni: '-', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
                         { test: 'RPI', onc: '0.3', yeni: '-', ref: '-', birim: '-', durum: '-' },
-                        { test: 'Trombosit', onc: '208', yeni: '-', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }
-                    ]
+			{ test: 'Trombosit', onc: '208', yeni: '-', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }
+		    ]
                 },
 
                 mirnav: {
@@ -242,7 +242,6 @@
                         { test: 'IP', onc: '3.1', yeni: '3.0', ref: '2.6 - 6.0', birim: 'mg/dL', durum: 'N' },
                         { test: 'Kalsiyum', onc: '13.3', yeni: '13.3', ref: '8.8 - 11.9', birim: 'mg/dL', durum: 'H' },
                         { test: 'Klor', onc: '126', yeni: '-', ref: '107.0 - 120.0', birim: 'meq/l', durum: 'h' },
-                        { test: 'CPK', onc: '184', yeni: '-', ref: '87.0 - 309.0', birim: 'u/L', durum: 'N' },
                         { test: 'NA/K', onc: '36.38', yeni: '39.5', ref: '-', birim: '-', durum: '-' },
                         { test: 'Potasyum', onc: '4.7', yeni: '4.0', ref: '3.4 - 4.6', birim: 'mEq/L', durum: 'N' },
                         { test: 'Sodyum', onc: '171', yeni: '158', ref: '147.0 - 156.0', birim: 'mEq/L', durum: 'H' },
@@ -276,13 +275,12 @@
                         { test: 'Nötrofil (%)', onc: '64.0', yeni: '63.8', ref: '30.0 - 83.5', birim: '%', durum: 'N' },
                         { test: 'PCT', onc: '2.30', yeni: '2.25', ref: '0.9 - 7.0', birim: 'ml/L', durum: 'N' },
                         { test: 'PDW', onc: '14.5', yeni: '-', ref: '12.0 - 17.5', birim: 'Adet', durum: 'N' },
-                        { test: '%PT', onc: '0.0', yeni: '0.2', ref: '-', birim: '-', durum: '-' },
                         { test: 'RBC-O', onc: '10.31', yeni: '11.26', ref: '-', birim: '-', durum: '-' },
                         { test: 'RDW-CV', onc: '16.2', yeni: '16.6', ref: '14.2 - 26.6', birim: '%', durum: 'N' },
                         { test: 'RDW-SD', onc: '25.1', yeni: '24.2', ref: '22.0 - 39.6', birim: 'fL', durum: 'N' },
                         { test: 'RET%', onc: '0.05', yeni: '0.12', ref: '0.1 - 0.9', birim: '%', durum: 'N' },
                         { test: 'RHE', onc: '17.4', yeni: '17.0', ref: '14.2 - 21.5', birim: '-', durum: 'N' },
-                        { test: 'RPI', onc: '0.0', yeni: '0.2', ref: '-', birim: '-', durum: '-' },
+                        { test: 'RPI', onc '0.0', yeni: '0.2', ref: '-', birim: '-', durum: '-' },
                         { test: 'Trombosit', onc: '226', yeni: '223', ref: '140.0 - 595.0', birim: 'x 10^9/L', durum: 'N' }
                     ]
                 }
@@ -539,8 +537,8 @@
                                     <thead>
                                         <tr class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
                                             <th class="p-3 text-left">Test</th>
-                                            <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">31.10.2025</th>
+                                            <th class="p-3 text-left">Önceki Sonuç (17.09.2025)</th>
+                                            <th class="p-3 text-left">Yeni Sonuç (31.10.2025)</th>
                                             <th class="p-3 text-left">Değişim</th>
                                             <th class="p-3 text-left">Referans</th>
                                             <th class="p-3 text-left">Birim</th>
@@ -567,7 +565,7 @@
                         </div>
                         
                         <div class="bg-white rounded-2xl shadow-2xl p-6">
-                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Hemogram</h2>
+                            <h2 class="text-2xl font-bold text-blue-600 mb-4 border-b-2 border-blue-600 pb-2">Hemogram (17.09.2025)</h2>
                             <p class="text-gray-600 mb-4">Yeni sonuç bilgisi bulunmamaktadır.</p>
                             <div class="overflow-x-auto">
                                 <table class="w-full text-sm">
@@ -575,8 +573,6 @@
                                         <tr class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
                                             <th class="p-3 text-left">Test</th>
                                             <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">31.10.2025</th>
-                                            <th class="p-3 text-left">Değişim</th>
                                             <th class="p-3 text-left">Referans</th>
                                             <th class="p-3 text-left">Birim</th>
                                         </tr>
@@ -615,11 +611,9 @@
                                 <table class="w-full text-sm">
                                     <thead>
                                         <tr class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-                                            <th class="p-3 text-left">Test</th>
+                                            <th class="p-3 text-left">Test Adı</th>
                                             <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">16.12.2025</th>
-                                            <th class="p-3 text-left">Değişim</th>
-                                            <th class="p-3 text-left">Referans</th>
+                                            <th class="p-3 text-left">Referans Aralık</th>
                                             <th class="p-3 text-left">Birim</th>
                                         </tr>
                                     </thead>
@@ -627,13 +621,7 @@
                                         ${data.biyokimya.map(item => `
                                             <tr class="border-b hover:bg-gray-50">
                                                 <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3 ${this.statusCellColor(this.getInitialStatus(item.onc, item.ref))}"><span class="px-3 py-1 rounded">${item.onc}</span></td>
-                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-2 py-1 rounded">${item.yeni}</span></td>
-                                                <td class="p-3">
-                                                    <span class="${this.getArrow(item.onc, item.yeni) === '↑' ? 'text-red-600' : this.getArrow(item.onc, item.yeni) === '↓' ? 'text-green-600' : 'text-gray-600'}">
-                                                        ${this.getArrow(item.onc, item.yeni)} ${this.getChange(item.onc, item.yeni)}
-                                                    </span>
-                                                </td>
+                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-3 py-1 rounded font-medium">${item.sonuc}</span></td>
                                                 <td class="p-3 text-gray-600">${item.ref}</td>
                                                 <td class="p-3">${item.birim}</td>
                                             </tr>
@@ -649,11 +637,9 @@
                                 <table class="w-full text-sm">
                                     <thead>
                                         <tr class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-                                            <th class="p-3 text-left">Test</th>
+                                            <th class="p-3 text-left">Test Adı</th>
                                             <th class="p-3 text-left">17.09.2025</th>
-                                            <th class="p-3 text-left">16.12.2025</th>
-                                            <th class="p-3 text-left">Değişim</th>
-                                            <th class="p-3 text-left">Referans</th>
+                                            <th class="p-3 text-left">Referans Aralık</th>
                                             <th class="p-3 text-left">Birim</th>
                                         </tr>
                                     </thead>
@@ -661,13 +647,7 @@
                                         ${data.hemogram.map(item => `
                                             <tr class="border-b hover:bg-gray-50">
                                                 <td class="p-3 font-semibold">${item.test}</td>
-                                                <td class="p-3 ${this.statusCellColor(this.getInitialStatus(item.onc, item.ref))}"><span class="px-3 py-1 rounded">${item.onc}</span></td>
-                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-2 py-1 rounded">${item.yeni}</span></td>
-                                                <td class="p-3">
-                                                    <span class="${this.getArrow(item.onc, item.yeni) === '↑' ? 'text-red-600' : this.getArrow(item.onc, item.yeni) === '↓' ? 'text-green-600' : 'text-gray-600'}">
-                                                        ${this.getArrow(item.onc, item.yeni)} ${this.getChange(item.onc, item.yeni)}
-                                                    </span>
-                                                </td>
+                                                <td class="p-3 ${this.statusCellColor(item.durum)}"><span class="px-3 py-1 rounded font-medium">${item.sonuc}</span></td>
                                                 <td class="p-3 text-gray-600">${item.ref}</td>
                                                 <td class="p-3">${item.birim}</td>
                                             </tr>
