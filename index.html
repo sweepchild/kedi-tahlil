@@ -217,8 +217,12 @@
                 return '<span class="text-gray-400 ml-1 text-xs">→</span>';
             },
 
+	    // Dinamik tablo oluşturucu (GÜNCELLENMİŞ HALİ)
             renderDynamicTable(title, dates, rowData, colorClass) {
-                const dateHeaders = dates.map(d => `<th class="p-3 text-left">${d}</th>`).join('');
+                // Tarih başlıklarını oluştur
+                const dateHeaders = dates.map(d => `<th class="p-3 text-left min-w-[100px]">${d}</th>`).join('');
+
+                // Satırları oluştur
                 const rows = rowData.map(item => {
                     const valueCells = item.values.map((val, index) => {
                         const status = this.getStatus(val, item.ref);
@@ -227,17 +231,19 @@
                         if (index === item.values.length - 1 && index > 0) {
                             arrow = this.getArrowHtml(val, item.values[index-1]);
                         }
-                        return `<td class="p-3 ${cellColor} border-r border-white border-opacity-20">
+                        return `<td class="p-3 ${cellColor} border-r border-white border-opacity-20 whitespace-nowrap">
                                     <span class="px-2 py-1 rounded font-medium">${val}${arrow}</span>
                                 </td>`;
                     }).join('');
 
                     return `
-                        <tr class="border-b hover:bg-gray-50 transition">
-                            <td class="p-3 font-semibold text-gray-700 w-1/4">${item.test}</td>
+                        <tr class="border-b hover:bg-gray-50 transition group">
+                            <td class="p-3 font-semibold text-gray-700 sticky left-0 z-10 bg-white group-hover:bg-gray-50 border-r border-gray-100 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)] min-w-[120px]">
+                                ${item.test}
+                            </td>
                             ${valueCells}
-                            <td class="p-3 text-gray-500 text-xs">${item.ref}</td>
-                            <td class="p-3 text-gray-500 text-xs">${item.birim}</td>
+                            <td class="p-3 text-gray-500 text-xs whitespace-nowrap">${item.ref}</td>
+                            <td class="p-3 text-gray-500 text-xs whitespace-nowrap">${item.birim}</td>
                         </tr>
                     `;
                 }).join('');
@@ -249,7 +255,7 @@
                             <table class="w-full text-sm">
                                 <thead>
                                     <tr class="bg-gradient-to-r from-gray-700 to-gray-900 text-white">
-                                        <th class="p-3 text-left">Test</th>
+                                        <th class="p-3 text-left sticky left-0 z-20 bg-gray-700 border-r border-gray-600 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.3)]">Test</th>
                                         ${dateHeaders}
                                         <th class="p-3 text-left w-24">Ref</th>
                                         <th class="p-3 text-left w-16">Birim</th>
