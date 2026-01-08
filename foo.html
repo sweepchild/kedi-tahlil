@@ -21,6 +21,8 @@
 
     <script>
         // --- SABİT TANIMLAR (SCHEMA) ---
+        // Testlerin isimleri, referans aralıkları ve birimleri burada tanımlanır.
+        // Burayı bir daha değiştirmenize gerek kalmaz.
         const DEFINITIONS = {
             biyokimya: [
                 { id: 'ALB_GLOB', label: 'ALB/GLOB', ref: '0.4 - 1.5', unit: '-' },
@@ -83,6 +85,8 @@
         };
 
         // --- HAM VERİLER ---
+        // Buraya yeni tarihleri aşağıdaki blok formatında ekleyebilirsiniz.
+        // id'ler yukarıdaki DEFINITIONS ile eşleşmelidir.
         const RAW_DATA = {
             luke: {
                 name: 'Luke', dogum: '01.07.2018', yas: 7,
@@ -97,6 +101,14 @@
                         biyokimya: { 'ALB_GLOB': '0.8', 'ALB': '3.5', 'ALP': '<14', 'ALT': '61', 'AST_ALT': '0.6', 'AST': '35', 'BUN_CRE': '22.5', 'BUN': '19.6', 'CRE': '0.87', 'Fruktozamin': '298', 'GGT': '<10', 'GLOB': '4.2', 'Glukoz': '218', 'IP': '2.4', 'Kalsiyum': '11.8', 'Klor': '106', 'NA_K': '38.65', 'NH3': '30', 'Potasyum': '3.7', 'Sodyum': '143', 'TBIL': '0.4', 'TCHO': '198', 'TP': '7.7', 'vAMY': '1407' },
                         hemogram: { 'Bazofil': '0.04', 'Bazofil_P': '0.3', 'Eozinofil_P': '4.7', 'Eozinofil': '0.69', 'Eritrosit': '10.07', 'Hematokrit': '42.6', 'Hemoglobin': '14.8', 'HFR': '0.0', 'IPF': '2.7', 'IRF': '10.3', 'Lenfosit_P': '10.5', 'Lenfosit': '1.54', 'Lokosit': '14.66', 'MCHC': '347', 'MCH': '14.7', 'MCV': '42.3', 'MFR': '10.3', 'Monosit': '0.65', 'Monosit_P': '4.4', 'MPV': '11.4', 'Notrofil_P': '80.1', 'Notrofil': '11.74', 'PCT': '4.25', 'PDW': '14.3', 'RDW_CV': '16.0', 'RDW_SD': '25.0', 'RET_P': '0.22', 'RHE': '16.6', 'Trombosit': '372' }
                     }
+                    // YENİ TEST ÖRNEĞİ: (Buradaki yorum satırlarını kopyalayıp kullanabilirsin)
+                    /*
+                    , {
+                        date: '15.01.2026',
+                        biyokimya: { 'ALB': '3.9', 'Glukoz': '110' ... },
+                        hemogram: { ... }
+                    }
+                    */
                 ]
             },
             yeleli: {
@@ -141,12 +153,6 @@
                         date: '16.12.2025',
                         biyokimya: { 'ALB_GLOB': '0.95', 'ALB': '4.1', 'ALP': '19', 'ALT': '45', 'BUN_CRE': '22.17', 'BUN': '23.5', 'CRE': '1.06', 'GGT': '10', 'Fruktozamin': '337', 'Glukoz': '101', 'IP': '3.0', 'Kalsiyum': '13.3', 'NA_K': '39.5', 'Potasyum': '4.0', 'Sodyum': '158', 'TBIL': '0.7', 'TCHO': '219', 'TP': '8.4', 'vAMY': '1660' },
                         hemogram: { 'Bazofil': '0.02', 'Bazofil_P': '0.3', 'Eozinofil': '0.18', 'Eozinofil_P': '2.2', 'Eritrosit': '11.70', 'Hematokrit': '50.1', 'Hemoglobin': '17.2', 'HFR': '0.0', 'IPF': '2', 'IRF': '9.2', 'Lenfosit': '2.26', 'Lenfosit_P': '27.9', 'Lokosit': '8.19', 'MCHC': '343', 'MCH': '14.7', 'MCV': '42.8', 'MFR': '9.2', 'Monosit': '0.48', 'Monosit_P': '5.8', 'MPV': '10.1', 'Notrofil': '5.23', 'Notrofil_P': '63.8', 'PCT': '2.25', 'RDW_CV': '16.6', 'RDW_SD': '24.2', 'RET_P': '0.12', 'RHE': '17.0', 'Trombosit': '223' }
-                    },
-                    // YENİ EKLENEN 3. TEST (MIRNAV)
-                    {
-                        date: '05.01.2026',
-                        biyokimya: { 'ALB': '3.4', 'TP': '7.1', 'ALP': '18', 'ALT': '52', 'NA_K': '39.5', 'GGT': '10', 'AST': '28', 'vAMY': '1863', 'BUN': '19.6', 'TCHO': '218', 'Kalsiyum': '12.0', 'CRE': '1.06', 'TBIL': '0.4', 'Glukoz': '170', 'IP': '5.0', 'Potasyum': '4.0', 'Sodyum': '158', 'Klor': '111', 'BUN_CRE': '18.49', 'ALB_GLOB': '0.92' },
-                        hemogram: { 'Lokosit': '5.03', 'Notrofil': '3.06', 'Lenfosit': '1.50', 'Monosit': '0.24', 'Eozinofil': '0.23', 'Bazofil': '0.01', 'Notrofil_P': '60.8', 'Lenfosit_P': '29.8', 'Monosit_P': '4.7', 'Eozinofil_P': '4.5', 'Bazofil_P': '0.2', 'Eritrosit': '10.32', 'Hemoglobin': '15.3' }
                     }
                 ]
             }
@@ -154,15 +160,18 @@
 
         const App = {
             currentPage: 'home',
-            data: {},
+            data: {}, // İşlenmiş veri buraya dolacak
 
             init() {
+                // Ham veriyi (RAW_DATA) işleyip, App.render'ın anlayacağı formata (columns) çeviriyoruz
                 this.processData();
                 this.render();
             },
 
             processData() {
+                // Her kedi için döngü
                 for (const [kediKey, kediData] of Object.entries(RAW_DATA)) {
+                    // Temel yapı
                     this.data[kediKey] = {
                         name: kediData.name,
                         dogum: kediData.dogum,
@@ -172,13 +181,19 @@
                         hemogram: []
                     };
 
+                    // Biyokimya ve Hemogram tablolarını oluştur
                     ['biyokimya', 'hemogram'].forEach(tableType => {
+                        // O tablo tipindeki tüm tanımları (Satır başlıkları) al
                         const defs = DEFINITIONS[tableType];
+                        
                         this.data[kediKey][tableType] = defs.map(def => {
+                            // Her bir tanım (örn: ALB) için, tüm tarihlerdeki değerleri topla
                             const values = kediData.results.map(res => {
+                                // O tarihteki sonuçlarda bu test var mı?
                                 const val = res[tableType] && res[tableType][def.id];
                                 return val !== undefined ? val : '-';
                             });
+
                             return {
                                 test: def.label,
                                 ref: def.ref,
@@ -190,6 +205,7 @@
                 }
             },
 
+            // --- Yardımcı Fonksiyonlar (Önceki koddan aynen alındı) ---
             getStatus(value, ref) {
                 if (!value || value === '-' || !ref || ref === '-') return '-';
                 let cleanVal = value.toString().replace('<', '').replace('>', '').replace(',', '.');
@@ -217,9 +233,14 @@
                 return '<span class="text-gray-400 ml-1 text-xs">→</span>';
             },
 
+            // --- Render Fonksiyonları ---
             renderDynamicTable(title, dates, rowData, colorClass) {
                 const dateHeaders = dates.map(d => `<th class="p-3 text-left">${d}</th>`).join('');
-                const rows = rowData.map(item => {
+                
+                // Eğer bir satırın tüm değerleri '-' ise o satırı gösterme (Opsiyonel, şu an hepsi gösteriliyor)
+                const validRows = rowData; //.filter(row => row.values.some(v => v !== '-'));
+
+                const rows = validRows.map(item => {
                     const valueCells = item.values.map((val, index) => {
                         const status = this.getStatus(val, item.ref);
                         const cellColor = this.statusCellColor(status);
@@ -324,9 +345,8 @@
             }
         };
 
+        // Başlat
         App.init();
     </script>
 </body>
 </html>
-
-
