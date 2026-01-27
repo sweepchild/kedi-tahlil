@@ -33,7 +33,7 @@
                 { id: 'BUN', label: 'BUN', ref: '17.6 - 32.8', unit: 'mg/dL' },
                 { id: 'CPK', label: 'CPK', ref: '87.0 - 309.0', unit: 'u/L' },
                 { id: 'CRE', label: 'CRE', ref: '0.8 - 1.8', unit: 'mg/dL' },
-                { id: 'Fruktozamin', label: 'Fruktozamin', ref: '-', unit: 'umol/L' },
+                { id: 'Fruktozamin', label: 'Fruktozamin', ref: '-', unit: '-' },
                 { id: 'GGT', label: 'GGT', ref: '1.0 - 10.0', unit: 'u/L' },
                 { id: 'GLOB', label: 'GLOB', ref: '-', unit: 'g/dl' },
                 { id: 'Glukoz', label: 'Glukoz', ref: '71.0 - 148.0', unit: 'mg/dL' },
@@ -96,11 +96,6 @@
                         date: '13.11.2025',
                         biyokimya: { 'ALB_GLOB': '0.8', 'ALB': '3.5', 'ALP': '<14', 'ALT': '61', 'AST_ALT': '0.6', 'AST': '35', 'BUN_CRE': '22.5', 'BUN': '19.6', 'CRE': '0.87', 'Fruktozamin': '298', 'GGT': '<10', 'GLOB': '4.2', 'Glukoz': '218', 'IP': '2.4', 'Kalsiyum': '11.8', 'Klor': '106', 'NA_K': '38.65', 'NH3': '30', 'Potasyum': '3.7', 'Sodyum': '143', 'TBIL': '0.4', 'TCHO': '198', 'TP': '7.7', 'vAMY': '1407' },
                         hemogram: { 'Bazofil': '0.04', 'Bazofil_P': '0.3', 'Eozinofil_P': '4.7', 'Eozinofil': '0.69', 'Eritrosit': '10.07', 'Hematokrit': '42.6', 'Hemoglobin': '14.8', 'HFR': '0.0', 'IPF': '2.7', 'IRF': '10.3', 'Lenfosit_P': '10.5', 'Lenfosit': '1.54', 'Lokosit': '14.66', 'MCHC': '347', 'MCH': '14.7', 'MCV': '42.3', 'MFR': '10.3', 'Monosit': '0.65', 'Monosit_P': '4.4', 'MPV': '11.4', 'Notrofil_P': '80.1', 'Notrofil': '11.74', 'PCT': '4.25', 'PDW': '14.3', 'RDW_CV': '16.0', 'RDW_SD': '25.0', 'RET_P': '0.22', 'RHE': '16.6', 'Trombosit': '372' }
-                    },
-                    {
-                        date: '24.01.2026',
-                        biyokimya: { 'ALB': '3.3', 'ALB_GLOB': '0.75', 'ALP': '17', 'ALT': '53', 'BUN': '18.1', 'BUN_CRE': '19.67', 'Kalsiyum': '10.9', 'CRE': '0.92', 'GGT': '13', 'Glukoz': '269', 'IP': '1.9', 'TBIL': '0.3', 'TCHO': '276', 'TP': '7.7', 'vAMY': '1370', 'Fruktozamin': '298' },
-                        hemogram: { 'Lokosit': '17.02', 'Notrofil': '14.25', 'Lenfosit': '1.53', 'Monosit': '0.63', 'Eozinofil': '0.54', 'Bazofil': '0.07', 'Notrofil_P': '83.7', 'Lenfosit_P': '9.0', 'Monosit_P': '3.7', 'Eozinofil_P': '3.2', 'Bazofil_P': '0.4', 'Eritrosit': '10.11', 'Hemoglobin': '14.9', 'Hematokrit': '42.0', 'MCV': '41.5', 'MCHC': '355', 'MCH': '14.7', 'RDW_CV': '16.2', 'RDW_SD': '23.9', 'RET_P': '0.26', 'IRF': '17.8', 'MFR': '15.3', 'HFR': '2.5', 'RHE': '16.5', 'Trombosit': '298', 'MPV': '12.0', 'PDW': '14.1', 'PCT': '3.56' }
                     }
                 ]
             },
@@ -116,11 +111,6 @@
                         date: '20.11.2025',
                         biyokimya: { 'ALB_GLOB': '0.90', 'ALB': '3.5', 'ALP': '14', 'ALT': '58', 'AST': '27', 'BUN_CRE': '25.21', 'BUN': '17.9', 'CRE': '0.71', 'Fruktozamin': '300', 'GGT': '10', 'Glukoz': '270', 'IP': '2.6', 'Kalsiyum': '13.0', 'Klor': '106', 'NA_K': '38.65', 'Potasyum': '3.7', 'Sodyum': '143', 'TBIL': '0.2', 'TCHO': '157', 'TP': '7.4', 'vAMY': '1352' },
                         hemogram: { 'Bazofil': '0.09', 'Bazofil_P': '0.9', 'Eozinofil': '0.29', 'Eozinofil_P': '3.1', 'Eritrosit': '11.04', 'Hematokrit': '42.7', 'Hemoglobin': '15.4', 'HFR': '0.0', 'IPF': '2', 'IRF': '25.5', 'Lenfosit': '1.66', 'Lenfosit_P': '17.5', 'Lokosit': '9.50', 'MCHC': '361', 'MCH': '13.9', 'MCV': '38.7', 'MFR': '25.5', 'Monosit': '0.56', 'Monosit_P': '5.9', 'MPV': '13.4', 'Notrofil': '6.90', 'Notrofil_P': '72.6', 'PCT': '0.44', 'PDW': '13.9', 'RDW_CV': '15.0', 'RDW_SD': '24.6', 'RET_P': '0.08', 'RHE': '16.1', 'Trombosit': '33' }
-                    },
-                    {
-                        date: '24.01.2026',
-                        biyokimya: { 'ALB': '3.7', 'ALB_GLOB': '0.97', 'ALP': '15', 'ALT': '31', 'BUN': '17.4', 'BUN_CRE': '17.76', 'Kalsiyum': '12.9', 'CRE': '0.98', 'GGT': '20', 'Glukoz': '302', 'IP': '2.0', 'TBIL': '0.6', 'TCHO': '222', 'TP': '7.5', 'vAMY': '1285', 'Fruktozamin': '309' },
-                        hemogram: { 'Lokosit': '13.14', 'Notrofil': '9.83', 'Lenfosit': '2.01', 'Monosit': '0.63', 'Eozinofil': '0.55', 'Bazofil': '0.12', 'Notrofil_P': '74.8', 'Lenfosit_P': '15.3', 'Monosit_P': '4.8', 'Eozinofil_P': '4.2', 'Bazofil_P': '0.9', 'Eritrosit': '11.88', 'Hemoglobin': '15.8', 'Hematokrit': '44.8', 'MCV': '37.7', 'MCH': '13.3', 'MCHC': '353', 'RDW_CV': '15.3', 'RDW_SD': '20.3', 'RET_P': '0.23', 'IRF': '21.9', 'MFR': '19.5', 'HFR': '2.4', 'RHE': '15.7', 'Trombosit': '132', 'MPV': '13.2', 'PDW': '14.4', 'PCT': '1.74' }
                     }
                 ]
             },
@@ -136,11 +126,6 @@
                         date: '31.10.2025',
                         biyokimya: { 'Fruktozamin': '403', 'Glukoz': '129' },
                         hemogram: {}
-                    },
-                    {
-                        date: '24.01.2026',
-                        biyokimya: { 'ALB': '-', 'ALB_GLOB': '-', 'ALP': '14', 'ALT': '47', 'BUN': '23.4', 'BUN_CRE': '30.79', 'Kalsiyum': '11.6', 'CRE': '0.76', 'GGT': '19', 'Glukoz': '189', 'IP': '4.3', 'TBIL': '0.7', 'TCHO': '-', 'TP': '7.5', 'vAMY': '1486', 'Fruktozamin': '309' },
-                        hemogram: { 'Lokosit': '8.71', 'Notrofil': '5.02', 'Lenfosit': '3.02', 'Monosit': '0.40', 'Eozinofil': '0.19', 'Bazofil': '0.08', 'Notrofil_P': '57.6', 'Lenfosit_P': '34.7', 'Monosit_P': '4.6', 'Eozinofil_P': '2.2', 'Bazofil_P': '0.9', 'Eritrosit': '12.57', 'Hemoglobin': '18.0', 'Hematokrit': '52.5', 'MCV': '41.8', 'MCH': '14.3', 'MCHC': '343', 'RDW_CV': '15.8', 'RDW_SD': '24.1', 'RET_P': '0.12', 'IRF': '4.5', 'MFR': '4.5', 'HFR': '0.0', 'RHE': '16.5', 'Trombosit': '259', 'MPV': '10.2', 'PDW': '14.7', 'PCT': '2.65' }
                     }
                 ]
             },
@@ -157,10 +142,11 @@
                         biyokimya: { 'ALB_GLOB': '0.95', 'ALB': '4.1', 'ALP': '19', 'ALT': '45', 'BUN_CRE': '22.17', 'BUN': '23.5', 'CRE': '1.06', 'GGT': '10', 'Fruktozamin': '337', 'Glukoz': '101', 'IP': '3.0', 'Kalsiyum': '13.3', 'NA_K': '39.5', 'Potasyum': '4.0', 'Sodyum': '158', 'TBIL': '0.7', 'TCHO': '219', 'TP': '8.4', 'vAMY': '1660' },
                         hemogram: { 'Bazofil': '0.02', 'Bazofil_P': '0.3', 'Eozinofil': '0.18', 'Eozinofil_P': '2.2', 'Eritrosit': '11.70', 'Hematokrit': '50.1', 'Hemoglobin': '17.2', 'HFR': '0.0', 'IPF': '2', 'IRF': '9.2', 'Lenfosit': '2.26', 'Lenfosit_P': '27.9', 'Lokosit': '8.19', 'MCHC': '343', 'MCH': '14.7', 'MCV': '42.8', 'MFR': '9.2', 'Monosit': '0.48', 'Monosit_P': '5.8', 'MPV': '10.1', 'Notrofil': '5.23', 'Notrofil_P': '63.8', 'PCT': '2.25', 'RDW_CV': '16.6', 'RDW_SD': '24.2', 'RET_P': '0.12', 'RHE': '17.0', 'Trombosit': '223' }
                     },
+                    // YENİ EKLENEN 3. TEST (MIRNAV)
                     {
                         date: '05.01.2026',
                         biyokimya: { 'ALB': '3.4', 'TP': '7.1', 'ALP': '18', 'ALT': '52', 'NA_K': '39.5', 'GGT': '10', 'AST': '28', 'vAMY': '1863', 'BUN': '19.6', 'TCHO': '218', 'Kalsiyum': '12.0', 'CRE': '1.06', 'TBIL': '0.4', 'Glukoz': '170', 'IP': '5.0', 'Potasyum': '4.0', 'Sodyum': '158', 'Klor': '111', 'BUN_CRE': '18.49', 'ALB_GLOB': '0.92' },
-                        hemogram: { 'Lokosit': '5.03', 'Notrofil': '3.06', 'Lenfosit': '1.50', 'Monosit': '0.24', 'Eozinofil': '0.23', 'Bazofil': '0.01', 'Notrofil_P': '60.8', 'Lenfosit_P': '29.8', 'Monosit_P': '4.7', 'Eozinofil_P': '4.5', 'Bazofil_P': '0.2', 'Eritrosit': '10.32', 'Hemoglobin': '15.3', 'Hematokrit': '43.4', 'MCV': '42.1', 'MCH': '14.8', 'MCHC': '353', 'RDW_CV': '16.1', 'RDW_SD': '24.1', 'IRF': '4.5', 'RET_P': '0.12', 'MFR': '4.5', 'HFR': '0.0', 'RHE': '16.5', 'Trombosit': '259', 'MPV': '10.2', 'PDW': '14.7', 'PCT': '2.65' }
+                        hemogram: { 'Lokosit': '5.03', 'Notrofil': '3.06', 'Lenfosit': '1.50', 'Monosit': '0.24', 'Eozinofil': '0.23', 'Bazofil': '0.01', 'Notrofil_P': '60.8', 'Lenfosit_P': '29.8', 'Monosit_P': '4.7', 'Eozinofil_P': '4.5', 'Bazofil_P': '0.2', 'Eritrosit': '10.32', 'Hemoglobin': '15.3' }
                     }
                 ]
             }
@@ -231,6 +217,7 @@
                 return '<span class="text-gray-400 ml-1 text-xs">→</span>';
             },
 
+	    // Dinamik tablo oluşturucu (GÜNCELLENMİŞ HALİ)
             renderDynamicTable(title, dates, rowData, colorClass) {
                 // Tarih başlıklarını oluştur
                 const dateHeaders = dates.map(d => `<th class="p-3 text-left min-w-[100px]">${d}</th>`).join('');
@@ -347,4 +334,5 @@
     </script>
 </body>
 </html>
+
 
