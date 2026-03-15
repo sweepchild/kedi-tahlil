@@ -110,12 +110,6 @@
                         date: '07.03.2026',
                         biyokimya: { 'TP': '7.5', 'ALB': '3.2', 'GGT': '10', 'ALT': '246', 'ALB_GLOB': '0.74', 'BUN_CRE': '18.96', 'ALP': '23', 'TCHO': '339', 'BUN': '18.2', 'TBIL': '0.3', 'Glukoz': '251', 'CRE': '0.96', 'IP': '2.2', 'Kalsiyum': '12.1', 'Fruktozamin': '335' },
                         hemogram: { 'Lokosit': '9.28', 'Notrofil': '7.16', 'Lenfosit': '1.31', 'Monosit': '0.38', 'Eozinofil': '0.40', 'Bazofil': '0.03', 'Notrofil_P': '77.2', 'Lenfosit_P': '14.1', 'Monosit_P': '4.1', 'Eozinofil_P': '4.3', 'Bazofil_P': '0.3', 'Eritrosit': '11.95', 'Hemoglobin': '18.7', 'Hematokrit': '52.3', 'MCV': '43.8', 'MCHC': '358', 'MCH': '15.7', 'RDW_CV': '17.1', 'RDW_SD': '26.3', 'IRF': '11.1', 'RET_P': '0.19', 'MFR': '10.4', 'HFR': '0.7', 'RHE': '17.5', 'Trombosit': '211', 'PDW': '14.7', 'MPV': '13.7', 'PCT': '2.89', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '3', 'RBC_O': '12.30', 'RPI': '0.4' }
-                    },
-                    // LUKE YENI TEST EKLENDI
-                    {
-                        date: '14.03.2026',
-                        biyokimya: { 'Glukoz': '258', 'IP': '2.3', 'TCHO': '321', 'Kalsiyum': '12.8', 'ALT': '77' },
-                        hemogram: { 'Lokosit': '8.39', 'Notrofil': '4.87', 'Lenfosit': '2.48', 'Monosit': '0.29', 'Eozinofil': '0.72', 'Bazofil': '0.03', 'Notrofil_P': '58.1', 'Lenfosit_P': '29.6', 'Monosit_P': '3.4', 'Eozinofil_P': '8.6', 'Bazofil_P': '0.3', 'Eritrosit': '9.39', 'Hemoglobin': '14.9', 'Hematokrit': '40.7', 'MCV': '43.3', 'MCHC': '366', 'MCH': '15.9', 'RDW_CV': '17.4', 'RDW_SD': '26.8', 'RET_P': '0.57', 'IRF': '23.9', 'MFR': '20.2', 'HFR': '3.7', 'RHE': '17.4', 'Trombosit': '377', 'MPV': '10.7', 'PDW': '14.6', 'PCT': '4.03', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '7', 'RBC_O': '9.71', 'RPI': '0.4' }
                     }
                 ]
             },
@@ -375,4 +369,3 @@
     </script>
 </body>
 </html>
-
