@@ -111,21 +111,11 @@
                         biyokimya: { 'TP': '7.5', 'ALB': '3.2', 'GGT': '10', 'ALT': '246', 'ALB_GLOB': '0.74', 'BUN_CRE': '18.96', 'ALP': '23', 'TCHO': '339', 'BUN': '18.2', 'TBIL': '0.3', 'Glukoz': '251', 'CRE': '0.96', 'IP': '2.2', 'Kalsiyum': '12.1', 'Fruktozamin': '335' },
                         hemogram: { 'Lokosit': '9.28', 'Notrofil': '7.16', 'Lenfosit': '1.31', 'Monosit': '0.38', 'Eozinofil': '0.40', 'Bazofil': '0.03', 'Notrofil_P': '77.2', 'Lenfosit_P': '14.1', 'Monosit_P': '4.1', 'Eozinofil_P': '4.3', 'Bazofil_P': '0.3', 'Eritrosit': '11.95', 'Hemoglobin': '18.7', 'Hematokrit': '52.3', 'MCV': '43.8', 'MCHC': '358', 'MCH': '15.7', 'RDW_CV': '17.1', 'RDW_SD': '26.3', 'IRF': '11.1', 'RET_P': '0.19', 'MFR': '10.4', 'HFR': '0.7', 'RHE': '17.5', 'Trombosit': '211', 'PDW': '14.7', 'MPV': '13.7', 'PCT': '2.89', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '3', 'RBC_O': '12.30', 'RPI': '0.4' }
                     },
+                    // LUKE YENI TEST EKLENDI
                     {
                         date: '14.03.2026',
                         biyokimya: { 'Glukoz': '258', 'IP': '2.3', 'TCHO': '321', 'Kalsiyum': '12.8', 'ALT': '77' },
                         hemogram: { 'Lokosit': '8.39', 'Notrofil': '4.87', 'Lenfosit': '2.48', 'Monosit': '0.29', 'Eozinofil': '0.72', 'Bazofil': '0.03', 'Notrofil_P': '58.1', 'Lenfosit_P': '29.6', 'Monosit_P': '3.4', 'Eozinofil_P': '8.6', 'Bazofil_P': '0.3', 'Eritrosit': '9.39', 'Hemoglobin': '14.9', 'Hematokrit': '40.7', 'MCV': '43.3', 'MCHC': '366', 'MCH': '15.9', 'RDW_CV': '17.4', 'RDW_SD': '26.8', 'RET_P': '0.57', 'IRF': '23.9', 'MFR': '20.2', 'HFR': '3.7', 'RHE': '17.4', 'Trombosit': '377', 'MPV': '10.7', 'PDW': '14.6', 'PCT': '4.03', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '7', 'RBC_O': '9.71', 'RPI': '0.4' }
-                    },
-                    {
-                        date: '09.05.2026',
-                        biyokimya: { 'TBIL': '0.3', 'TCHO': '257', 'TP': '7.0', 'ALB': '3.0', 'ALB_GLOB': '0.75', 'ALP': '17', 'ALT': '70', 'BUN': '17.3', 'BUN_CRE': '18.02', 'Kalsiyum': '11.1', 'CRE': '0.96', 'GGT': '10', 'Glukoz': '203', 'IP': '2.5' },
-                        hemogram: { 'Lokosit': '21.48', 'Notrofil': '16.39', 'Lenfosit': '2.04', 'Monosit': '0.71', 'Eozinofil': '2.30', 'Bazofil': '0.04', 'Notrofil_P': '76.3', 'Lenfosit_P': '9.5', 'Monosit_P': '3.3', 'Eozinofil_P': '10.7', 'Bazofil_P': '0.2', 'Eritrosit': '8.83', 'Hemoglobin': '14.2', 'Hematokrit': '39.3', 'MCV': '44.5', 'MCH': '16.1', 'MCHC': '361', 'RDW_CV': '15.5', 'RDW_SD': '24.8', 'IRF': '23.9', 'RET_P': '0.30', 'MFR': '21.6', 'HFR': '2.3', 'RHE': '17.5', 'Trombosit': '424', 'PDW': '14.7', 'MPV': '10.9', 'PCT': '4.62', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '6', 'RBC_O': '9.05', 'RPI': '0.2' }
-                    },
-                    // LUKE YENI (15.05.2026) EKLENDI
-                    {
-                        date: '15.05.2026',
-                        biyokimya: { 'TBIL': '0.2', 'TCHO': '247', 'TP': '6.5', 'ALB': '2.9', 'ALB_GLOB': '0.81', 'ALP': '15', 'ALT': '41', 'BUN': '20.1', 'BUN_CRE': '20.30', 'Kalsiyum': '11.2', 'CRE': '0.99', 'GGT': '10', 'Glukoz': '184', 'IP': '2.1' },
-                        hemogram: { 'Lokosit': '14.19', 'Notrofil': '9.61', 'Lenfosit': '3.42', 'Monosit': '0.38', 'Eozinofil': '0.73', 'Bazofil': '0.05', 'Notrofil_P': '67.7', 'Lenfosit_P': '24.1', 'Monosit_P': '2.7', 'Eozinofil_P': '5.1', 'Bazofil_P': '0.4', 'Eritrosit': '9.94', 'Hemoglobin': '16.0', 'Hematokrit': '46.1', 'MCV': '46.4', 'MCH': '16.1', 'MCHC': '347', 'RDW_CV': '16.4', 'RDW_SD': '27.2', 'IRF': '25.8', 'RET_P': '0.50', 'MFR': '19.9', 'HFR': '5.9', 'RHE': '17.7', 'Trombosit': '398', 'PDW': '14.7', 'MPV': '10.5', 'PCT': '4.17', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '8', 'RBC_O': '9.37', 'RPI': '0.4' }
                     }
                 ]
             },
@@ -151,11 +141,6 @@
                         date: '07.03.2026',
                         biyokimya: { 'Kalsiyum': '12.0', 'CRE': '0.86', 'IP': '4.0', 'Glukoz': '209', 'TBIL': '0.6', 'BUN': '23.2', 'TCHO': '239', 'ALP': '19', 'ALT': '61', 'GGT': '10', 'TP': '7.0', 'ALB': '3.5', 'ALB_GLOB': '1', 'BUN_CRE': '26.98', 'Fruktozamin': '306' },
                         hemogram: { 'Lokosit': '12.10', 'Notrofil': '8.17', 'Lenfosit': '2.90', 'Monosit': '0.64', 'Eozinofil': '0.23', 'Bazofil': '0.16', 'Notrofil_P': '67.5', 'Lenfosit_P': '24.0', 'Monosit_P': '5.3', 'Eozinofil_P': '1.9', 'Bazofil_P': '1.3', 'Eritrosit': '11.37', 'Hemoglobin': '17.2', 'Hematokrit': '49.6', 'MCV': '43.6', 'MCHC': '347', 'MCH': '15.1', 'RDW_CV': '16.1', 'RDW_SD': '24.8', 'IRF': '22.3', 'RET_P': '0.30', 'MFR': '19.6', 'HFR': '2.7', 'RHE': '17.0', 'Trombosit': '323', 'PDW': '15.0', 'MPV': '14.3', 'PCT': '4.62', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '6', 'RBC_O': '11.58', 'RPI': '0.4' }
-                    },
-                    {
-                        date: '09.05.2026',
-                        biyokimya: { 'TBIL': '0.6', 'TCHO': '177', 'TP': '7.3', 'ALB': '3.3', 'ALB_GLOB': '0.82', 'ALP': '16', 'ALT': '30', 'BUN': '17.2', 'BUN_CRE': '18.90', 'Kalsiyum': '13.5', 'CRE': '0.91', 'GGT': '10', 'Glukoz': '221', 'IP': '2.8' },
-                        hemogram: { 'Lokosit': '12.38', 'Notrofil': '8.90', 'Lenfosit': '2.22', 'Monosit': '0.67', 'Eozinofil': '0.51', 'Bazofil': '0.09', 'Notrofil_P': '71.9', 'Lenfosit_P': '17.9', 'Monosit_P': '5.4', 'Eozinofil_P': '4.1', 'Bazofil_P': '0.7', 'Eritrosit': '10.86', 'Hemoglobin': '15.3', 'Hematokrit': '42.2', 'MCV': '38.9', 'MCH': '14.1', 'MCHC': '363', 'RDW_CV': '15.7', 'RDW_SD': '21.7', 'IRF': '21.3', 'RET_P': '0.14', 'MFR': '18.9', 'HFR': '2.4', 'RHE': '16.3', 'Trombosit': '213', 'PDW': '14.4', 'MPV': '10.1', 'PCT': '2.16', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '4', 'RBC_O': '10.92', 'RPI': '0.1' }
                     }
                 ]
             },
@@ -181,11 +166,6 @@
                         date: '07.03.2026',
                         biyokimya: { 'Kalsiyum': '12.4', 'Glukoz': '238', 'TBIL': '0.5', 'BUN': '21.4', 'TCHO': '199', 'CRE': '0.79', 'IP': '3.4', 'ALT': '40', 'GGT': '10', 'ALB': '3.6', 'ALP': '14', 'TP': '7.3', 'BUN_CRE': '27.09', 'ALB_GLOB': '0.97', 'Fruktozamin': '361' },
                         hemogram: { 'Lokosit': '15.57', 'Notrofil': '10.96', 'Lenfosit': '3.08', 'Monosit': '0.75', 'Eozinofil': '0.65', 'Bazofil': '0.12', 'Notrofil_P': '70.4', 'Lenfosit_P': '19.8', 'Monosit_P': '4.8', 'Eozinofil_P': '4.2', 'Bazofil_P': '0.8', 'Eritrosit': '11.53', 'Hemoglobin': '16.0', 'Hematokrit': '45.4', 'MCV': '39.4', 'MCH': '13.9', 'MCHC': '352', 'RDW_CV': '16.2', 'RDW_SD': '22.4', 'IRF': '18.4', 'RET_P': '0.26', 'MFR': '15.9', 'HFR': '2.5', 'RHE': '15.9', 'Trombosit': '209', 'PDW': '14.1', 'MPV': '13.0', 'PCT': '2.73', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '5', 'RBC_O': '11.85', 'RPI': '0.3' }
-                    },
-                    {
-                        date: '09.05.2026',
-                        biyokimya: { 'TBIL': '0.2', 'TCHO': '215', 'TP': '7.3', 'ALB': '3.2', 'ALB_GLOB': '0.78', 'ALP': '20', 'ALT': '67', 'BUN': '21.8', 'BUN_CRE': '30.28', 'Kalsiyum': '11.4', 'CRE': '0.72', 'GGT': '10', 'Glukoz': '217', 'IP': '4.6' },
-                        hemogram: { 'Lokosit': '12.26', 'Notrofil': '8.85', 'Lenfosit': '2.11', 'Monosit': '0.74', 'Eozinofil': '0.40', 'Bazofil': '0.16', 'Notrofil_P': '72.2', 'Lenfosit_P': '17.2', 'Monosit_P': '6.0', 'Eozinofil_P': '3.3', 'Bazofil_P': '1.3', 'Eritrosit': '11.35', 'Hemoglobin': '16.9', 'Hematokrit': '48.5', 'MCV': '42.7', 'MCH': '14.9', 'MCHC': '348', 'RDW_CV': '15.8', 'RDW_SD': '23.8', 'IRF': '26.8', 'RET_P': '0.26', 'MFR': '22.9', 'HFR': '3.9', 'RHE': '17.4', 'Trombosit': '305', 'PDW': '14.7', 'MPV': '10.1', 'PCT': '3.08', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '3', 'RBC_O': '11.36', 'RPI': '0.3' }
                     }
                 ]
             },
@@ -211,11 +191,6 @@
                         date: '07.03.2026',
                         biyokimya: { 'ALB': '3.7', 'TP': '7.5', 'GGT': '10', 'ALT': '42', 'ALP': '24', 'CRE': '1.21', 'ALB_GLOB': '0.97', 'TBIL': '0.7', 'Glukoz': '118', 'BUN_CRE': '14.96', 'TCHO': '263', 'BUN': '18.1', 'Kalsiyum': '12.6', 'IP': '4.1', 'Fruktozamin': '314' },
                         hemogram: { 'Lokosit': '7.19', 'Notrofil': '4.86', 'Lenfosit': '1.76', 'Monosit': '0.34', 'Eozinofil': '0.22', 'Bazofil': '0.01', 'Notrofil_P': '67.6', 'Lenfosit_P': '24.5', 'Monosit_P': '4.7', 'Eozinofil_P': '3.0', 'Bazofil_P': '0.2', 'Eritrosit': '11.79', 'Hemoglobin': '18.4', 'Hematokrit': '51.8', 'MCV': '43.9', 'MCHC': '355', 'MCH': '15.6', 'RDW_CV': '16.8', 'RDW_SD': '26.1', 'RET_P': '0.07', 'IRF': '7.4', 'MFR': '7.4', 'HFR': '0.0', 'RHE': '16.9', 'Trombosit': '212', 'MPV': '9.5', 'PDW': '14.1', 'PCT': '2.01', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '2', 'RBC_O': '11.86', 'RPI': '0.1' }
-                    },
-                    {
-                        date: '09.05.2026',
-                        biyokimya: { 'TBIL': '0.3', 'TCHO': '217', 'TP': '7.2', 'ALB': '3.4', 'ALB_GLOB': '0.89', 'ALP': '23', 'ALT': '43', 'BUN': '16.3', 'BUN_CRE': '15.52', 'Kalsiyum': '11.4', 'CRE': '1.05', 'GGT': '10', 'Glukoz': '115', 'IP': '6.1' },
-                        hemogram: { 'Lokosit': '6.71', 'Notrofil': '4.82', 'Lenfosit': '1.34', 'Monosit': '0.32', 'Eozinofil': '0.22', 'Bazofil': '0.01', 'Notrofil_P': '71.9', 'Lenfosit_P': '20.0', 'Monosit_P': '4.7', 'Eozinofil_P': '3.3', 'Bazofil_P': '0.1', 'Eritrosit': '9.60', 'Hemoglobin': '15.6', 'Hematokrit': '43.1', 'MCV': '44.9', 'MCH': '16.3', 'MCHC': '362', 'RDW_CV': '16.7', 'RDW_SD': '26.7', 'IRF': '16.7', 'RET_P': '0.08', 'MFR': '16.7', 'HFR': '0.0', 'RHE': '17.5', 'Trombosit': '266', 'PDW': '14.5', 'MPV': '9.8', 'PCT': '2.60', 'P_LCC': '0.0', 'P_LCR': '0.0', 'IPF': '3', 'RBC_O': '9.77', 'RPI': '0.1' }
                     }
                 ]
             }
@@ -400,3 +375,4 @@
     </script>
 </body>
 </html>
+
